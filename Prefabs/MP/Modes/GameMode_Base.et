@@ -1,0 +1,12 @@
+SCR_BaseGameMode {
+ ID "56B2B479C6B96951"
+ components {
+  SCR_DataCollectorComponent "{5ADE83EE64329989}" {
+   m_aModules {
+    SCR_DataCollectorCrimesModule "{5D9C706AD14AF695}" {
+     m_bWarCrimesEnabled 0
+    }
+   }
+  }
+ }
+}
