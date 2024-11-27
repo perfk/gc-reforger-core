@@ -8,5 +8,29 @@ SCR_BaseGameMode {
     }
    }
   }
+  SCR_VotingManagerComponent "{5650BB6B6089393A}" {
+   m_aVotingTemplates {
+    SCR_VotingAdmin "{62F763926B120B77}" {
+     m_Type ADMIN
+     m_bIsValuePlayerID 1
+     m_fDuration 60
+     m_fThreshold 0.333
+     m_iMinParticipation 0.333
+     m_Info SCR_VotingUIInfo "{62F76392E80E5E4B}" {
+      Name "Vote Admin"
+      m_sStartVotingName "Start Vote Admin"
+      m_sCancelVotingName "Cancel Vote Admin"
+      m_sAbstainVoteName "Abstaining"
+      m_sStickyNotificationText "Vote Player Admin"
+      m_iStartNotificationId VOTING_EDITOR_IN_START
+      m_iSucceededNotificationId VOTING_EDITOR_IN_SUCCEED
+      m_iFailedNotificationId VOTING_EDITOR_IN_FAIL
+      m_eVoteCastedLocalNotification VOTING_EDITOR_IN_VOTE_CASTED
+      m_eVoteAbstainedLocalNotification VOTING_EDITOR_IN_VOTE_ABSTAINED
+     }
+     m_iVoteCooldownTime 10
+    }
+   }
+  }
  }
 }
