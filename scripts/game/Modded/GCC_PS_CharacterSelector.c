@@ -40,7 +40,8 @@ modded class PS_CharacterSelector
 			m_PlayableControllerComponent.SetPlayerPlayable(playerId, m_iPlayableId);
 		} else {
 			AudioSystem.PlaySound("{9500A96BBA3B0581}Sounds/UI/Samples/Menu/UI_Gadget_Select.wav");
-			m_PlayableControllerComponent.MoveToVoNRoom(playerId, m_sFactionKey, "#PS-VoNRoom_Faction");
+			// Disable faction von room moving (unclicking a slot)
+			//m_PlayableControllerComponent.MoveToVoNRoom(playerId, m_sFactionKey, "#PS-VoNRoom_Faction");
 			m_PlayableControllerComponent.ChangeFactionKey(playerId, "");
 			m_PlayableControllerComponent.SetPlayerState(playerId, PS_EPlayableControllerState.NotReady);
 			m_PlayableControllerComponent.SetPlayerPlayable(playerId, RplId.Invalid());
