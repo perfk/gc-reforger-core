@@ -35,6 +35,9 @@ modded class PS_CharacterSelector
 			AudioSystem.PlaySound("{9500A96BBA3B0581}Sounds/UI/Samples/Menu/UI_Gadget_Select.wav");
 			// Disable group von room moving
 			//m_PlayableControllerComponent.MoveToVoNRoom(playerId, m_sFactionKey, m_sPlayableCallsign);
+			if (gameState == SCR_EGameModeState.BRIEFING)
+				m_PlayableControllerComponent.MoveToVoNRoom(playerId, m_sFactionKey, "#PS-VoNRoom_Command");
+			
 			m_PlayableControllerComponent.ChangeFactionKey(playerId, m_sFactionKey);
 			m_PlayableControllerComponent.SetPlayerState(playerId, PS_EPlayableControllerState.NotReady);	
 			m_PlayableControllerComponent.SetPlayerPlayable(playerId, m_iPlayableId);
