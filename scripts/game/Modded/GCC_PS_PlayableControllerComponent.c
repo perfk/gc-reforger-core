@@ -18,7 +18,6 @@ modded class PS_PlayableControllerComponent
 	{
 		PlayerController playerController = GetGame().GetPlayerController();
 		PS_PlayableControllerComponent playableController = PS_PlayableControllerComponent.Cast(playerController.FindComponent(PS_PlayableControllerComponent));
-		Print("GRAY.UpdateSpectator VoNPosition = " + playableController.VoNPosition);
 		playableController.VoNPosition = m_eCamera.GetOrigin();
 	}
 }
