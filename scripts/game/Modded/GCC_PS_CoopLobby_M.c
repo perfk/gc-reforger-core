@@ -38,7 +38,7 @@ modded class PS_CoopLobby
 			float ratio = selector.GetMaxCount() / totalSlots;
 			ratios.Insert(ratio);
 		}
-		ratios.Debug();
+
 		int remainingPlayers = totalPlayers;
 		for (int i = 0; i < ratios.Count(); i++)
 		{
