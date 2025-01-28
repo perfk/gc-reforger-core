@@ -57,4 +57,32 @@ modded class PS_CharacterSelector
 		if (!PS_PlayersHelper.IsAdminOrServer() && playerId == m_iCurrentPlayerId && gameState == SCR_EGameModeState.BRIEFING)
 			m_PlayableControllerComponent.SwitchToMenuServer(SCR_EGameModeState.BRIEFING);
 	}
+	
+	override void OnPlayerPlayableChange(int playerId, RplId playbleId)
+	{
+		// Self kick
+		if (m_iPlayerId == m_iCurrentPlayerId)
+		{
+			m_bCanKick = false;
+			UpdateState();
+			return;
+		}
+		
+		// Admin can kick any
+		m_bCanKick = PS_PlayersHelper.IsAdminOrServer();
+		if (m_bCanKick)
+		{
+			UpdateState();
+			return;
+		}
+		
+		// get CURRENT PLAYER playable
+		RplId currentPlayableId = m_PlayableManager.GetPlayableByPlayer(m_iCurrentPlayerId);
+		if (currentPlayableId == RplId.Invalid())
+		{
+			m_bCanKick = false;
+		}
+		
+		UpdateState();
+	}
 }
