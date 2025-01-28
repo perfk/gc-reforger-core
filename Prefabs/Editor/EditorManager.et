@@ -6,6 +6,7 @@ SCR_EditorManagerEntity {
    m_bCanPingAttach 0
    m_PointingEffects {
     SCR_SoundEditorEffect "{606C3698D589CF12}" {
+     m_sSound ""
     }
    }
   }
