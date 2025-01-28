@@ -3,7 +3,7 @@ SCR_EditorPingEntity : "{712601A9A89CA03C}PrefabsEditable/System/E_PingEntity.et
  components {
   SCR_EditableEntityComponent "{5306824254A407F1}" {
    m_UIInfo SCR_UIInfo "{53068242364BD38E}" {
-    Icon "{B7AFE435DECF23EF}UI/Textures/Editor/EditableEntities/Locations/EditableEntity_Location_Focused.edds"
+    Icon "{8A8ACADB697F8EBB}UI/Textures/RadialMenu/RadialItemForeground.edds"
    }
   }
  }
