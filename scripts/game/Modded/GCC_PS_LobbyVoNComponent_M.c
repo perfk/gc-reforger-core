@@ -10,7 +10,7 @@ modded class PS_LobbyVoNComponent
 			physics.SetAngularVelocity("0 0 0");
 			physics.SetMass(0);
 			physics.SetDamping(1, 1);
-			//physics.ChangeSimulationState(SimulationState.NONE);
+			physics.EnableGravity(false);
 			physics.SetActive(ActiveState.INACTIVE);
 			physics.SetInteractionLayer(EPhysicsLayerDefs.Unused);
 		}

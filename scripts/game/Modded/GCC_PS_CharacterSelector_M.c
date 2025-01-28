@@ -57,32 +57,51 @@ modded class PS_CharacterSelector
 		if (!PS_PlayersHelper.IsAdminOrServer() && playerId == m_iCurrentPlayerId && gameState == SCR_EGameModeState.BRIEFING)
 			m_PlayableControllerComponent.SwitchToMenuServer(SCR_EGameModeState.BRIEFING);
 	}
-	
-	override void OnPlayerPlayableChange(int playerId, RplId playbleId)
+
+	override void OnStateClicked(SCR_ButtonBaseComponent button)
 	{
-		// Self kick
-		if (m_iPlayerId == m_iCurrentPlayerId)
+		m_bStateClickSkip = true;
+		switch (m_state)
 		{
-			m_bCanKick = false;
-			UpdateState();
-			return;
+			case PS_ECharacterState.Pin:
+				AudioSystem.PlaySound("{63DB9ACDD10DB801}Sounds/UI/Samples/Editor/UI_E_Layer_Edit_Back.wav");
+				m_PlayableControllerComponent.UnpinPlayer(m_iPlayerId);
+				break;
+			case PS_ECharacterState.Dead:
+				break;
+			case PS_ECharacterState.Lock:
+				AudioSystem.PlaySound("{E495F2DA6A44D0BB}Sounds/UI/Samples/Menu/UI_Button_Filter_Off.wav");
+				m_PlayableControllerComponent.SetPlayablePlayer(m_iPlayableId, -1);
+				break;
+			case PS_ECharacterState.Kick:
+				AudioSystem.PlaySound("{5EF75EB4A836831F}Sounds/Explosions/_SharedData/Bodies/Explosion_Body_TNT_Far_01.wav");
+				//m_PlayableControllerComponent.MoveToVoNRoom(m_iPlayerId, m_sFactionKey, "#PS-VoNRoom_Faction");
+				if (gameState == SCR_EGameModeState.BRIEFING)
+					m_PlayableControllerComponent.MoveToVoNRoom(playerId, m_sFactionKey, "#PS-VoNRoom_Command");
+			
+				if (gameState == SCR_EGameModeState.SLOTSELECTION)
+					m_PlayableControllerComponent.MoveToVoNRoom(playerId, m_sFactionKey, "#PS-VoNRoom_Global");
+				
+				m_PlayableControllerComponent.ChangeFactionKey(m_iPlayerId, "");
+				m_PlayableControllerComponent.SetPlayerState(m_iPlayerId, PS_EPlayableControllerState.NotReady);
+				m_PlayableControllerComponent.SetPlayerPlayable(m_iPlayerId, -1);
+				if (PS_PlayersHelper.IsAdminOrServer())
+					m_PlayableControllerComponent.UnpinPlayer(m_iPlayerId);
+				break;
+			case PS_ECharacterState.Empty:
+				AudioSystem.PlaySound("{B6008DBCA565E5E1}Sounds/UI/Samples/Menu/UI_Button_Filter_On.wav");
+				if (m_iPlayerId > 0)
+					m_PlayableControllerComponent.SetPlayerState(m_iPlayerId, PS_EPlayableControllerState.NotReady);
+				m_PlayableControllerComponent.SetPlayablePlayer(m_iPlayableId, -2);
+			   break;
+			case PS_ECharacterState.Player:
+				break;
+			case PS_ECharacterState.Disconnected:
+				AudioSystem.PlaySound("{5EF75EB4A836831F}Sounds/Explosions/_SharedData/Bodies/Explosion_Body_TNT_Far_01.wav");
+				m_PlayableControllerComponent.MoveToVoNRoom(m_iPlayerId, m_PlayableManager.GetPlayerFactionKey(m_iPlayerId), "#PS-VoNRoom_Faction");
+				m_PlayableControllerComponent.ChangeFactionKey(m_iPlayerId, "");
+				m_PlayableControllerComponent.SetPlayerPlayable(m_iPlayerId, RplId.Invalid());
+				break;
 		}
-		
-		// Admin can kick any
-		m_bCanKick = PS_PlayersHelper.IsAdminOrServer();
-		if (m_bCanKick)
-		{
-			UpdateState();
-			return;
-		}
-		
-		// get CURRENT PLAYER playable
-		RplId currentPlayableId = m_PlayableManager.GetPlayableByPlayer(m_iCurrentPlayerId);
-		if (currentPlayableId == RplId.Invalid())
-		{
-			m_bCanKick = false;
-		}
-		
-		UpdateState();
 	}
 }
