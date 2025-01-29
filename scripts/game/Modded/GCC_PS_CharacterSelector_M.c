@@ -61,6 +61,7 @@ modded class PS_CharacterSelector
 	override void OnStateClicked(SCR_ButtonBaseComponent button)
 	{
 		m_bStateClickSkip = true;
+		SCR_EGameModeState gameState = m_GameModeCoop.GetState();
 		switch (m_state)
 		{
 			case PS_ECharacterState.Pin:
@@ -77,10 +78,10 @@ modded class PS_CharacterSelector
 				AudioSystem.PlaySound("{5EF75EB4A836831F}Sounds/Explosions/_SharedData/Bodies/Explosion_Body_TNT_Far_01.wav");
 				//m_PlayableControllerComponent.MoveToVoNRoom(m_iPlayerId, m_sFactionKey, "#PS-VoNRoom_Faction");
 				if (gameState == SCR_EGameModeState.BRIEFING)
-					m_PlayableControllerComponent.MoveToVoNRoom(playerId, m_sFactionKey, "#PS-VoNRoom_Command");
+					m_PlayableControllerComponent.MoveToVoNRoom(m_iPlayerId, m_sFactionKey, "#PS-VoNRoom_Command");
 			
 				if (gameState == SCR_EGameModeState.SLOTSELECTION)
-					m_PlayableControllerComponent.MoveToVoNRoom(playerId, m_sFactionKey, "#PS-VoNRoom_Global");
+					m_PlayableControllerComponent.MoveToVoNRoom(m_iPlayerId, m_sFactionKey, "#PS-VoNRoom_Global");
 				
 				m_PlayableControllerComponent.ChangeFactionKey(m_iPlayerId, "");
 				m_PlayableControllerComponent.SetPlayerState(m_iPlayerId, PS_EPlayableControllerState.NotReady);
