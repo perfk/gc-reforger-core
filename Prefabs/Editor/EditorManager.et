@@ -4,6 +4,7 @@ SCR_EditorManagerEntity {
   ACE_Finger_EditorComponent "{606C3698D6820F4F}" {
    m_fMaxPointingDistanceM 2500
    m_bCanPingAttach 0
+   m_fPingLifetimeS 3
    m_PointingEffects {
     SCR_SoundEditorEffect "{606C3698D589CF12}" {
      m_sSound ""
