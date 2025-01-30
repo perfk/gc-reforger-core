@@ -24,35 +24,95 @@ modded class PS_PlayableManager
 	
 	override void ApplyPlayable(int playerId)
 	{
-		super.ApplyPlayable(playerId);
-		
-		if(!m_hidePlayersOnSpawn)
-			return;
-		
 		PlayerManager playerManager = GetGame().GetPlayerManager();
 		SCR_PlayerController playerController = SCR_PlayerController.Cast(playerManager.GetPlayerController(playerId));
 		if (!playerController)
 			return;
+		PS_PlayableControllerComponent playableController = PS_PlayableControllerComponent.Cast(playerController.FindComponent(PS_PlayableControllerComponent));
+		SCR_GroupsManagerComponent groupsManagerComponent = SCR_GroupsManagerComponent.GetInstance();
 		
-		RplId playableId = GetPlayableByPlayer(playerId);
-		if(!playableId)
-			return;
-		IEntity entity = GetPlayableById(playableId).GetOwner();	
-		if(!entity)
-			return;
+		SetPlayerState(playerId, PS_EPlayableControllerState.Playing);
 		
-		PS_PlayableComponent playableComp = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
-		Physics physics = entity.GetPhysics();
-		
-		vector transform[4];
-		if (playableComp && physics)
+		RplId playableId = GetPlayableByPlayer(playerId);	
+		if (playableId != RplId.Invalid())
 		{
-			playableComp.GetSpawnTransform(transform);
-			entity.SetOrigin(transform[3]);
-			physics.EnableGravity(true);
-			entity.Update();
+			IEntity character = GetPlayableById(playableId).GetOwner();
+			if (character)
+			{
+				SCR_DamageManagerComponent damageManager = SCR_DamageManagerComponent.GetDamageManager(character);
+				if (damageManager)
+				{
+					if (damageManager.GetState() == EDamageState.DESTROYED)
+					{
+						GetGame().GetCallqueue().CallLater(WrapSwitch, 1000, false, playerId);
+					}
+				}
+			}
 		}
 		
-		playerController.Teleport(transform[3]);
+		IEntity entity;
+		if (playableId == RplId.Invalid() || playableId == -1) {
+			// Remove group
+			SCR_AIGroup currentGroup = groupsManagerComponent.GetPlayerGroup(playableId);
+			if (currentGroup) currentGroup.RemovePlayer(playerId);
+			SetPlayerFactionKey(playerId, "");
+			
+			entity = playableController.GetInitialEntity();
+			if (!entity)
+			{
+				Resource resource = Resource.Load("{ADDE38E4119816AB}Prefabs/InitialPlayer_Version2.et");
+				EntitySpawnParams params = new EntitySpawnParams();
+				entity = GetGame().SpawnEntityPrefab(resource, GetGame().GetWorld(), params);
+				playableController.SetInitialEntity(entity);
+			}
+			
+			PS_PlayableComponent playableComp = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
+			if(m_hidePlayersOnSpawn && playableComp && !playableComp.firstTimeSpawned)
+			{
+				Physics physics = entity.GetPhysics();
+				physics.SetVelocity("0 0 0");
+				physics.SetAngularVelocity("0 0 0");
+				physics.EnableGravity(true);
+				
+				vector transform[4];
+				playableComp.GetSpawnTransform(transform);
+				entity.SetOrigin(transform[3]);
+				entity.Update();
+				playableComp.firstTimeSpawned = true;
+			}
+			
+			GetGame().GetCallqueue().CallLater(playerController.SetInitialMainEntity, 0, false, entity);
+			
+			return;
+		} else entity = GetPlayableById(playableId).GetOwner();		 
+		
+		
+		// Delete VoN
+		IEntity vonEntity = playableController.GetInitialEntity();
+		if (vonEntity) SCR_EntityHelper.DeleteEntityAndChildren(vonEntity);
+	
+		PS_PlayableComponent playableComp = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
+		if(m_hidePlayersOnSpawn && playableComp && !playableComp.firstTimeSpawned)
+		{
+			Physics physics = entity.GetPhysics();
+			physics.SetVelocity("0 0 0");
+			physics.SetAngularVelocity("0 0 0");
+			physics.EnableGravity(true);
+			
+			vector transform[4];
+			playableComp.GetSpawnTransform(transform);
+			entity.SetOrigin(transform[3]);
+			entity.Update();
+			playableComp.firstTimeSpawned = true;
+		}
+	
+		GetGame().GetCallqueue().CallLater(playerController.SetInitialMainEntity, 0, false, entity);
+		
+		// Set new player faction
+		SCR_ChimeraCharacter playableCharacter = SCR_ChimeraCharacter.Cast(entity);
+		SCR_Faction faction = SCR_Faction.Cast(playableCharacter.GetFaction());
+		SetPlayerFactionKey(playerId, faction.GetFactionKey());
+		
+		GetGame().GetCallqueue().CallLater(ChangeGroup, 0, false, playerId, playableId);
 	}
 }
