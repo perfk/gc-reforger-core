@@ -5,10 +5,5 @@ FrameWidgetClass {
    "Is Enabled" 0
    "Is Visible" 0
   }
-  ImageWidgetClass "{607B1E27AE03E516}" {
-   Prefab "{607B1E27AE03E516}"
-   Texture "{378C1E24252C207D}UI/Textures/HUD/Modded/Compasses/compass_shadow360_nodirs.edds"
-   Size 264 264
-  }
  }
 }
