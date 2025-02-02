@@ -96,7 +96,7 @@ modded class PS_PlayableControllerComponent
 	}
 	*/
 }
-
+/*
 modded class PS_VoNRoomsManager
 {
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
@@ -109,3 +109,4 @@ modded class PS_VoNRoomsManager
 		playableController.SetVoNPosition(position);
 	}
 }
+*/
