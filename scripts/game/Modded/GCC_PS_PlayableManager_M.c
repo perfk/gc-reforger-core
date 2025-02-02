@@ -1,4 +1,3 @@
-/*
 modded class PS_PlayableManager
 {
 	[Attribute("1")]
@@ -23,4 +22,3 @@ modded class PS_PlayableManager
 		}
 	}
 }
-*/

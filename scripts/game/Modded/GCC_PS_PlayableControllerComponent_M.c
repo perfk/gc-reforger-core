@@ -34,14 +34,8 @@ modded class PS_PlayableControllerComponent
 		if (m_eInitialEntity)
 		{
 			if(m_isSpectating)
-			{
 				m_eInitialEntity.SetOrigin(m_eCamera.GetOrigin());
-			}
-			else
-			{
-				m_eInitialEntity.SetOrigin(VoNPosition);
-			}
-
+			
 			CameraBase cameraBase = GetGame().GetCameraManager().CurrentCamera();
 			if (cameraBase)
 				cameraBase.ApplyTransform(timeSlice);
@@ -61,8 +55,7 @@ modded class PS_PlayableControllerComponent
 		VoNPosition = position;
 		m_eInitialEntity.SetOrigin(position);
 	}
-	/*
-	Hide players on spawn
+	
 	override private void OnControlledEntityChanged(IEntity from, IEntity to)
 	{
 		super.OnControlledEntityChanged(from, to);
@@ -94,7 +87,6 @@ modded class PS_PlayableControllerComponent
 		player.SetOrigin(position);
 		physics.EnableGravity(true);
 	}
-	*/
 }
 
 modded class PS_VoNRoomsManager
