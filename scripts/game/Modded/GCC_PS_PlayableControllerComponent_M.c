@@ -36,6 +36,7 @@ modded class PS_PlayableControllerComponent
 			if(m_isSpectating)
 				m_eInitialEntity.SetOrigin(m_eCamera.GetOrigin());
 			
+			//m_eInitialEntity.SetOrigin(VoNPosition);
 			// Who broke camera on map?
 			CameraBase cameraBase = GetGame().GetCameraManager().CurrentCamera();
 			if (cameraBase)
@@ -64,6 +65,9 @@ modded class PS_VoNRoomsManager
 	override void RPC_MoveToRoom(int playerId, int roomId, vector position)
 	{
 		super.RPC_MoveToRoom(playerId, roomId, position);
-		PS_PlayableControllerComponent.GetPlayableController().SetVoNPosition(position);
+		
+		PlayerController playerController = GetGame().GetPlayerManager().GetPlayerController(playerId);
+		PS_PlayableControllerComponent playableController = PS_PlayableControllerComponent.Cast(playerController.FindComponent(PS_PlayableControllerComponent));
+		playableController.SetVoNPosition(position);
 	}
 }

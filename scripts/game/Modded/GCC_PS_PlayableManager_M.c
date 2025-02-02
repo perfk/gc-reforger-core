@@ -66,23 +66,8 @@ modded class PS_PlayableManager
 				playableController.SetInitialEntity(entity);
 			}
 			
-			PS_PlayableComponent playableComp = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
-			if(m_hidePlayersOnSpawn && playableComp && !playableComp.firstTimeSpawned)
-			{
-				Physics physics = entity.GetPhysics();
-				physics.SetVelocity("0 0 0");
-				physics.SetAngularVelocity("0 0 0");
-				physics.EnableGravity(true);
-				
-				vector transform[4];
-				playableComp.GetSpawnTransform(transform);
-				entity.SetOrigin(transform[3]);
-				entity.Update();
-				playableComp.firstTimeSpawned = true;
-			}
-			
-			GetGame().GetCallqueue().CallLater(playerController.SetInitialMainEntity, 0, false, entity);
-			
+			SetSpawnTransform(playerController);
+			GetGame().GetCallqueue().CallLater(playerController.SetInitialMainEntity, 1, false, entity);
 			return;
 		} else entity = GetPlayableById(playableId).GetOwner();		 
 		
@@ -91,28 +76,49 @@ modded class PS_PlayableManager
 		IEntity vonEntity = playableController.GetInitialEntity();
 		if (vonEntity) SCR_EntityHelper.DeleteEntityAndChildren(vonEntity);
 	
-		PS_PlayableComponent playableComp = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
-		if(m_hidePlayersOnSpawn && playableComp && !playableComp.firstTimeSpawned)
-		{
-			Physics physics = entity.GetPhysics();
-			physics.SetVelocity("0 0 0");
-			physics.SetAngularVelocity("0 0 0");
-			physics.EnableGravity(true);
-			
-			vector transform[4];
-			playableComp.GetSpawnTransform(transform);
-			entity.SetOrigin(transform[3]);
-			entity.Update();
-			playableComp.firstTimeSpawned = true;
-		}
-	
-		GetGame().GetCallqueue().CallLater(playerController.SetInitialMainEntity, 0, false, entity);
-		
+		SetSpawnTransform(playerController);
+		GetGame().GetCallqueue().CallLater(playerController.SetInitialMainEntity, 1, false, entity);
+
 		// Set new player faction
 		SCR_ChimeraCharacter playableCharacter = SCR_ChimeraCharacter.Cast(entity);
 		SCR_Faction faction = SCR_Faction.Cast(playableCharacter.GetFaction());
 		SetPlayerFactionKey(playerId, faction.GetFactionKey());
 		
 		GetGame().GetCallqueue().CallLater(ChangeGroup, 0, false, playerId, playableId);
+	}
+	
+	void SetSpawnTransform(SCR_PlayerController playerController)
+	{
+		IEntity player = playerController.GetControlledEntity();
+		PS_PlayableComponent playableComp = PS_PlayableComponent.Cast(player.FindComponent(PS_PlayableComponent));
+		if(m_hidePlayersOnSpawn && playableComp && !playableComp.firstTimeSpawned)
+		{
+			Physics physics = player.GetPhysics();
+			physics.SetVelocity("0 0 0");
+			physics.SetAngularVelocity("0 0 0");
+			physics.EnableGravity(true);
+			
+			vector transform[4];
+			playableComp.GetSpawnTransform(transform);
+			player.SetOrigin(transform[3]);
+			player.Update();
+			playableComp.firstTimeSpawned = true;
+		}
+		
+		GetGame().GetCallqueue().CallLater(CheckPlayerTeleported, 200, false, playerController);
+	}
+	
+	void CheckPlayerTeleported(SCR_PlayerController playerController)
+	{
+		IEntity player = playerController.GetControlledEntity();
+		vector position = player.GetOrigin();
+		if(player && position[1] > 90000)
+		{
+			PS_PlayableComponent playableComp = PS_PlayableComponent.Cast(player.FindComponent(PS_PlayableComponent));
+			vector transform[4];
+			playableComp.GetSpawnTransform(transform);
+			playerController.Teleport(transform[3]);
+			GetGame().GetCallqueue().CallLater(CheckPlayerTeleported, 200, false, playerController);
+		}
 	}
 }
