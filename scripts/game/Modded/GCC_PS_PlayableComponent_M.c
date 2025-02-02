@@ -1,4 +1,4 @@
 modded class PS_PlayableComponent
 {
-	bool firstTimeSpawned = false;
+	bool m_firstTimeSpawned = false;
 }
