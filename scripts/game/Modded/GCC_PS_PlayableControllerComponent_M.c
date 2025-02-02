@@ -34,9 +34,14 @@ modded class PS_PlayableControllerComponent
 		if (m_eInitialEntity)
 		{
 			if(m_isSpectating)
+			{
 				m_eInitialEntity.SetOrigin(m_eCamera.GetOrigin());
-			
-			// Who broke camera on map?
+			}
+			else
+			{
+				m_eInitialEntity.SetOrigin(VoNPosition);
+			}
+
 			CameraBase cameraBase = GetGame().GetCameraManager().CurrentCamera();
 			if (cameraBase)
 				cameraBase.ApplyTransform(timeSlice);
@@ -56,6 +61,40 @@ modded class PS_PlayableControllerComponent
 		VoNPosition = position;
 		m_eInitialEntity.SetOrigin(position);
 	}
+	/*
+	Hide players on spawn
+	override private void OnControlledEntityChanged(IEntity from, IEntity to)
+	{
+		super.OnControlledEntityChanged(from, to);
+
+		if (!Replication.IsServer())
+			return;
+		
+		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
+		if(!playableManager.m_hidePlayersOnSpawn)
+			return;
+		
+		PS_PlayableComponent playableComp = PS_PlayableComponent.Cast(to.FindComponent(PS_PlayableComponent));
+		if(!playableComp || playableComp.m_firstTimeSpawned)
+			return;
+		
+		vector transform[4];
+		playableComp.GetSpawnTransform(transform);
+		Rpc(RPC_SetSpawnPosition, transform[3]);
+		playableComp.m_firstTimeSpawned = true;
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Owner)]
+	protected void RPC_SetSpawnPosition(vector position)
+	{
+		IEntity player = GetGame().GetPlayerController().GetControlledEntity();
+		Physics physics = player.GetPhysics();
+		physics.SetVelocity("0 0 0");
+		physics.SetAngularVelocity("0 0 0");
+		player.SetOrigin(position);
+		physics.EnableGravity(true);
+	}
+	*/
 }
 
 modded class PS_VoNRoomsManager
@@ -64,6 +103,9 @@ modded class PS_VoNRoomsManager
 	override void RPC_MoveToRoom(int playerId, int roomId, vector position)
 	{
 		super.RPC_MoveToRoom(playerId, roomId, position);
-		PS_PlayableControllerComponent.GetPlayableController().SetVoNPosition(position);
+		
+		PlayerController playerController = GetGame().GetPlayerManager().GetPlayerController(playerId);
+		PS_PlayableControllerComponent playableController = PS_PlayableControllerComponent.Cast(playerController.FindComponent(PS_PlayableControllerComponent));
+		playableController.SetVoNPosition(position);
 	}
 }
