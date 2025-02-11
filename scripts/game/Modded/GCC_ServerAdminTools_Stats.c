@@ -42,7 +42,10 @@ modded class ServerAdminTools_Stats
 		context.WriteValue("events", m_events);
 		
 		SCR_MissionHeader missionHeader = SCR_MissionHeader.Cast(GetGame().GetMissionHeader());
-		context.WriteValue("mission", missionHeader.m_sName);
+		if (missionHeader)
+		{
+			context.WriteValue("mission", missionHeader.m_sName);
+		}
 		
 		return context.SaveToFile(path);
 	};
