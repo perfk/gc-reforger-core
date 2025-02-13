@@ -18,5 +18,26 @@ SCR_ChimeraCharacter {
     }
    }
   }
+  CharacterAnimationComponent "{520EA1D2F659C994}" {
+   components {
+    SCR_CharacterCommandHandlerComponent "{520EA1D2F659C99A}" {
+     MoveSettings ScriptCharacterCommandMoveSettings "{520EA1D2F659C99B}" {
+      m_fSpeed_Erect_Slow_Strafe 1
+      m_fSpeed_Erect_Normal_Strafe 2.53
+      m_fSpeed_Erect_Fast_Strafe 3.66
+      m_fSpeed_Crouch_Slow_Strafe 0.8
+      m_fSpeed_Crouch_Normal_Strafe 1.8
+      m_fSpeed_Crouch_Fast_Strafe 3.33
+      m_fSpeed_Erect_Slope_Slow_Strafe 0.66
+      m_fSpeed_Erect_Slope_Normal_Strafe 1.86
+      m_fSpeed_Erect_Slope_Fast_Strafe 1.46
+      m_fSpeed_Crouch_Slope_Slow_Strafe 0.46
+      m_fSpeed_Crouch_Slope_Normal_Strafe 1.86
+      m_fSpeed_Crouch_Slope_Fast_Strafe 1.16
+      SpeedMultiplierADS 0.75
+     }
+    }
+   }
+  }
  }
 }
