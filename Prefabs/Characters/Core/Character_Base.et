@@ -34,7 +34,9 @@ SCR_ChimeraCharacter {
       m_fSpeed_Crouch_Slope_Slow_Strafe 0.46
       m_fSpeed_Crouch_Slope_Normal_Strafe 1.86
       m_fSpeed_Crouch_Slope_Fast_Strafe 1.16
-      SpeedMultiplierADS 0.75
+      SpeedMultiplierADS 0.85
+      InnertiaCurve +{
+      }
      }
     }
    }
