@@ -14,7 +14,7 @@ SCR_ChimeraCharacter {
      }
     }
     SCR_AICombatComponent "{55A2C9BE343B2EA1}" {
-     m_eAISkillDefault VETERAN
+     m_eAISkillDefault EXPERT
     }
    }
   }
