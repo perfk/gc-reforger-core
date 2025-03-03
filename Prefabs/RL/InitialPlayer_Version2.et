@@ -7,5 +7,8 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
   SCR_CharacterDamageManagerComponent "{55872AD7B4E959F2}" {
    EnableDamage 0
   }
+  RHS_ThermalSlotManagerComponent "{60D6F4C7C990A7BB}" {
+   Enabled 0
+  }
  }
 }
