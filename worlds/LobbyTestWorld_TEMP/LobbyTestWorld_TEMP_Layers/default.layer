@@ -1,0 +1,16 @@
+SCR_AIGroup : "{2FA8727C0B695783}Prefabs/Groups/BLUFOR/British Forces/1989/Group_UK_1989_REG_RiflePHQ.et" {
+ coords 1436.751 37.994 2968.144
+ m_aStaticWaypoints {
+  "d1"
+ }
+}
+SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base.et" {
+ coords 1339.518 37.717 2971.054
+}
+SCR_AIGroup : "{7544247CE7FBC839}Prefabs/Groups/OPFOR/USSR/SovietArmy_MotorRiflesBTR_1980ish/P/Group_USSR_MSV80_MotRifleSquad_P.et" {
+ coords 1346.371 37.739 2973.112
+}
+SCR_DefendWaypoint d1 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+ coords 1434.318 37.954 2967.047
+ CompletionRadius 15
+}
