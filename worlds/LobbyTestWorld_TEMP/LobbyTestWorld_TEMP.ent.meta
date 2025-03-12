@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{72C0E1D0A7F9B5CE}worlds/LobbyTestWorld_TEMP/LobbyTestWorld_TEMP.ent"
+ Configurations {
+  ENTResourceClass PC {
+  }
+  ENTResourceClass XBOX_ONE : PC {
+  }
+  ENTResourceClass XBOX_SERIES : PC {
+  }
+  ENTResourceClass PS4 : PC {
+  }
+  ENTResourceClass PS5 : PC {
+  }
+  ENTResourceClass HEADLESS : PC {
+  }
+  ENTResourceClass Xbox : PC {
+  }
+ }
+}

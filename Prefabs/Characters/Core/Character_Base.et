@@ -1,6 +1,17 @@
 SCR_ChimeraCharacter {
  ID "520EC961A090B1EE"
  components {
+  CharacterAimingComponent "{520EA1D2F659CE42}" {
+   AimModifiers {
+    OnHitAimModifier "{64D93682B24460FD}" {
+     m_fLinearScale 0.12
+     m_fAngularScale 50
+     m_fRollRotationIntensity 2
+     m_fYawRotationIntensity 1.5
+     m_fPitchRotationIntensity 2
+    }
+   }
+  }
   ChimeraAIControlComponent "{520EA1D2DB109F34}" {
    components {
     PerceptionComponent "{54A2CBC75F06064B}" {
@@ -35,11 +46,13 @@ SCR_ChimeraCharacter {
       m_fSpeed_Crouch_Slope_Normal_Strafe 1.86
       m_fSpeed_Crouch_Slope_Fast_Strafe 1.16
       SpeedMultiplierADS 0.85
-      InnertiaCurve +{
+      InnertiaCurve {
+       0.001 0.752 0.251 0.752 0.498 0.443 0.755 0.41 1 0.249
       }
      }
     }
    }
   }
  }
+ coords 1339.518 37.717 2971.054
 }
