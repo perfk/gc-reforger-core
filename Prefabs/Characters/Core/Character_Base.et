@@ -30,7 +30,7 @@ SCR_ChimeraCharacter {
    }
   }
   SCR_CharacterDamageManagerComponent "{55872AD7B4E959F2}" {
-   m_fDOTScale 0.75
+   m_fDOTScale 0.66
   }
   CharacterAnimationComponent "{520EA1D2F659C994}" {
    components {
