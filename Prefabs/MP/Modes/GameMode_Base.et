@@ -8,6 +8,9 @@ SCR_BaseGameMode {
     }
    }
   }
+  SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
+   m_fDOTScale 0.75
+  }
   SCR_GameOverScreenManagerComponent "{56DEC646298AD219}" {
    m_GameOverScreenConfig SCR_GameOverScreenConfig "{56DEC6462FFDD82D}" {
     m_aGameOverScreens {
