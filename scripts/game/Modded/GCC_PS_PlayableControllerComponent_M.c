@@ -24,42 +24,27 @@ modded class PS_PlayableControllerComponent
 		m_isSpectating = false;
 	}
 	
-	override protected void EOnPostFixedFrame(IEntity owner, float timeSlice)
+	override void UpdatePosition()
 	{
-		RplComponent rpl = RplComponent.Cast(owner.FindComponent(RplComponent));
-		if (!rpl.IsOwner())
-			return;
+		super.UpdatePosition();
 		
-		// Lets fight with phisyc engine
-		if (m_eInitialEntity)
+		if (m_InitialEntity)
 		{
 			if(m_isSpectating)
 			{
-				m_eInitialEntity.SetOrigin(m_eCamera.GetOrigin());
+				m_InitialEntity.SetOrigin(m_Camera.GetOrigin());
 			}
 			else
 			{
-				m_eInitialEntity.SetOrigin(VoNPosition);
-			}
-
-			CameraBase cameraBase = GetGame().GetCameraManager().CurrentCamera();
-			if (cameraBase)
-				cameraBase.ApplyTransform(timeSlice);
-		} else {
-			PlayerController thisPlayerController = PlayerController.Cast(GetOwner());
-			IEntity entity = thisPlayerController.GetControlledEntity();
-			if (entity)
-			{
-				PS_LobbyVoNComponent von = PS_LobbyVoNComponent.Cast(entity.FindComponent(PS_LobbyVoNComponent));
-				if (von) m_eInitialEntity = entity;
+				m_InitialEntity.SetOrigin(m_vVoNPosition);
 			}
 		}
 	}
 	
-	void SetVoNPosition(vector position)
+	override void SetVoNPosition(vector VoNPosition)
 	{
-		VoNPosition = position;
-		m_eInitialEntity.SetOrigin(position);
+		m_vVoNPosition = VoNPosition;
+		m_InitialEntity.SetOrigin(VoNPosition);
 	}
 	/*
 	Hide players on spawn
