@@ -1,7 +1,12 @@
 modded class PS_LobbyVoNComponent
 {
 	
-	override void DisablePhysicForOwner(IEntity owner)
+	void PS_LobbyVoNComponent(IEntityComponentSource src, IEntity ent, IEntity parent)
+	{
+		GetGame().GetCallqueue().CallLater(DisablePhysicForOwner2, 0, false, ent);
+	}
+	
+	void DisablePhysicForOwner2(IEntity owner)
 	{
 		Physics physics = owner.GetPhysics();
 		if (physics)
