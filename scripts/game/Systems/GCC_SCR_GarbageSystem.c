@@ -15,6 +15,6 @@ modded class SCR_GarbageSystem : GarbageSystem
 			}
 		}
 
-		return OnInsertRequested(entity, lifetime);
+		return super.OnInsertRequested(entity, lifetime);
 	}
 }
