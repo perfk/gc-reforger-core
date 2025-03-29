@@ -1,12 +1,8 @@
 modded class PS_LobbyVoNComponent
 {
 	
-	void PS_LobbyVoNComponent(IEntityComponentSource src, IEntity ent, IEntity parent)
-	{
-		GetGame().GetCallqueue().CallLater(DisablePhysicForOwner2, 0, false, ent);
-	}
-	
-	void DisablePhysicForOwner2(IEntity owner)
+	//*****
+	override void DisablePhysicForOwner(IEntity owner)
 	{
 		Physics physics = owner.GetPhysics();
 		if (physics)
@@ -20,4 +16,5 @@ modded class PS_LobbyVoNComponent
 			physics.SetInteractionLayer(EPhysicsLayerDefs.Unused);
 		}
 	}
+	*****/
 }
