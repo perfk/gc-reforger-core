@@ -8,7 +8,7 @@ Turret : "{4AD877DEA242E512}Prefabs/Weapons/Core/Turret_Base.et" {
       PivotID "v_root"
       Offset 0.2703 2.989 -0.6399
      }
-     m_OverlayLayout "{C5E2E281F03A5CE8}UI/layouts/Sights/Optic_Triplex.layout"
+     m_OverlayLayout "{A9758BBE1909FEFD}UI/layouts/Editor/Overlays/Vignettes/GCC_Vignette_VeryHeavy.layout"
      m_sId "WD_periscope_commander_main"
     }
    }
@@ -48,16 +48,6 @@ Turret : "{4AD877DEA242E512}Prefabs/Weapons/Core/Turret_Base.et" {
      m_sCameraId "WD_periscope_commander_main"
     }
    }
-  }
-  WCS_VehicleAimCameraComponent "{650ABDF18D169A46}" {
-   Enabled 0
-   m_Position PointInfo "{650ABDF19B878113}" {
-    PivotID "v_root"
-    Offset 0.2703 2.989 -0.6399
-   }
-   m_sCompartmentUniqueName "Commanders Periscope"
-   m_sAimInputActionName "WD_periscope_commander_main"
-   m_AimInputActionTrigger PRESSED
   }
  }
  coords 1526.725 37.082 2933.901
