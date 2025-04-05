@@ -27,3 +27,19 @@ SCR_DefendWaypoint d1 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defen
  coords 1437.791 38.398 2941.377
  CompletionRadius 20
 }
+Vehicle LAV25_MERDC1 : "{B7A8BAA37CB0AC2B}Prefabs/Vehicles/Wheeled/LAV25/LAV25_MERDC.et" {
+ coords 1521.34 37.219 2933.416
+ angleY 144.42
+}
+Turret : "{DF5979FDE2682F70}Prefabs/Vehicles/Wheeled/LAV25/VehParts/Turret/LAV25_turret_base.et" {
+ components {
+  WCS_Armament_VehicleCameraComponent "{650AA2118A883578}" {
+   m_Cameras {
+    WCS_VehicleCameraProps "{650AA211829B2F66}" {
+     m_OverlayLayout "{A9758BBE1909FEFD}UI/layouts/Editor/Overlays/Vignettes/GCC_Vignette_VeryHeavy.layout"
+    }
+   }
+  }
+ }
+ coords 1526.725 37.082 2933.901
+}
