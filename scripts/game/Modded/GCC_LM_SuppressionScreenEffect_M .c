@@ -1,3 +1,4 @@
+/*
 modded class LM_SuppressionScreenEffect
 {	
 	override void UpdateEffect(float timeSlice)
@@ -17,3 +18,4 @@ modded class LM_SuppressionScreenEffect
 	}
 
 }
+*/
