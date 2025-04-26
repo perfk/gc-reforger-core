@@ -24,9 +24,9 @@ modded class PS_PlayableControllerComponent
 		m_isSpectating = false;
 	}
 	
-	override void UpdatePosition()
+	override void UpdatePosition(bool force)
 	{
-		super.UpdatePosition();
+		super.UpdatePosition(force);
 		
 		if (m_InitialEntity)
 		{
