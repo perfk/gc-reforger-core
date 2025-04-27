@@ -1,3 +1,4 @@
+/*
 modded class PS_PlayableControllerComponent
 {
 	protected bool m_isSpectating = false;
@@ -46,7 +47,7 @@ modded class PS_PlayableControllerComponent
 		m_vVoNPosition = VoNPosition;
 		m_InitialEntity.SetOrigin(VoNPosition);
 	}
-	/*
+	
 	Hide players on spawn
 	override private void OnControlledEntityChanged(IEntity from, IEntity to)
 	{
@@ -79,9 +80,9 @@ modded class PS_PlayableControllerComponent
 		player.SetOrigin(position);
 		physics.EnableGravity(true);
 	}
-	*/
+	
 }
-/*
+
 modded class PS_VoNRoomsManager
 {
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
