@@ -1,7 +1,6 @@
+/*
 modded class PS_LobbyVoNComponent
 {
-	
-	//*****
 	override void DisablePhysicForOwner(IEntity owner)
 	{
 		Physics physics = owner.GetPhysics();
@@ -16,5 +15,5 @@ modded class PS_LobbyVoNComponent
 			physics.SetInteractionLayer(EPhysicsLayerDefs.Unused);
 		}
 	}
-	*****/
 }
+*/
