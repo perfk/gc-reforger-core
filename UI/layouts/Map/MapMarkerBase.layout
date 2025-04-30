@@ -1,0 +1,53 @@
+FrameWidgetClass {
+ {
+  VerticalLayoutWidgetClass "{5D56BA46E7717DBF}" {
+   Prefab "{5D56BA46E7717DBF}"
+   Slot FrameWidgetSlot "{5D56BA46E7717D6A}" {
+    OffsetLeft 0
+    PositionY 20
+    OffsetTop 20
+    SizeX 100
+    OffsetRight -100
+    SizeY 30
+    OffsetBottom -50
+   }
+   {
+    TextWidgetClass "{5D269372DA54B302}" {
+     Prefab "{5D269372DA54B302}"
+     Slot LayoutSlot "{5D8AED759625D73D}" {
+      Padding 50 -38 -150 -5
+      FillWeight 1
+     }
+     Text "1st squad breach"
+     "Horizontal Alignment" Left
+     FontProperties FontProperties "{5D2693726AAD1299}" {
+     }
+     Offset 0 0
+    }
+    HorizontalLayoutWidgetClass "{627C693E4DB046B0}" {
+     Prefab "{627C693E4DB046B0}"
+     {
+      ImageWidgetClass "{62D2B972ECCEFD34}" {
+       Prefab "{62D2B972ECCEFD34}"
+       "Is Enabled" 0
+      }
+      TextWidgetClass "{5D56BA46CC7AEBEB}" {
+       Prefab "{5D56BA46CC7AEBEB}"
+       Slot LayoutSlot "{5D56BA46CC7AE802}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+        Padding 2 20 0 -20
+       }
+       Text ""
+      }
+      ImageWidgetClass "{5E387E0A15195C8B}" {
+       Prefab "{5E387E0A15195C8B}"
+       "Is Enabled" 0
+       "Is Visible" 0
+      }
+     }
+    }
+   }
+  }
+ }
+}
