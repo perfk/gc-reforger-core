@@ -16,12 +16,12 @@ SCR_BaseGameMode {
     m_aGameOverScreens {
      SCR_BaseGameOverScreenInfo "{568E810D7C96FEF0}" {
       m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{56D6DA8F67562868}" {
-       m_sTitle "Mission End"
+       m_sTitle "MISSION END"
       }
      }
      SCR_FactionGameOverScreenInfo "{568EB6DFDCD175BD}" {
       m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{568EB6DFE533EE66}" {
-       m_sTitle "Mission End"
+       m_sTitle "MISSION END"
       }
      }
     }
