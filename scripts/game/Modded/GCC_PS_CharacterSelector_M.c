@@ -128,4 +128,55 @@ modded class PS_CharacterSelector
 				break;
 		}
 	}
+	
+	// --------------------------------------------------------------------------------------------------------------------------------
+	// Context menu
+	override void OpenContext()
+	{
+		string playerName = PS_PlayableManager.GetInstance().GetPlayerName(m_iPlayerId);
+		PS_ContextMenu contextMenu = PS_ContextMenu.CreateContextMenuOnMousePosition(m_CoopLobby.GetRootWidget(), playerName);
+		contextMenu.ActionOpenInventory(m_iPlayableId).Insert(OnActionOpenInventory);
+		
+		if (m_iPlayerId > 0)
+		{
+			if (PS_PlayersHelper.IsAdminOrServer())
+			{
+				contextMenu.ActionGetArmaId(m_iPlayerId);
+			}
+			if (m_iPlayerId != m_iCurrentPlayerId)
+			{
+				PermissionState mute = PermissionState.DISALLOWED;
+				SocialComponent socialComp = SocialComponent.Cast(GetGame().GetPlayerController().FindComponent(SocialComponent));
+				if (socialComp.IsMuted(m_iPlayerId))
+					contextMenu.ActionUnmute(m_iPlayerId);
+				else
+					contextMenu.ActionMute(m_iPlayerId);
+				
+				if (m_bCanKick && m_iPlayerId >= 0 && m_iPlayerId != m_iCurrentPlayerId)
+					contextMenu.ActionFreeSlot(m_iPlayableId).Insert(OnActionFreeSlot);
+				
+				if (PS_PlayersHelper.IsAdminOrServer())
+				{
+					contextMenu.ActionDirectMessage(m_iPlayerId);
+					contextMenu.ActionKick(m_iPlayerId);
+					
+					if (m_PlayableManager.GetPlayerPin(m_iPlayerId))
+						contextMenu.ActionUnpin(m_iPlayerId);
+					else
+						contextMenu.ActionPin(m_iPlayerId);
+				}
+			}
+			if (m_CoopLobby.GetSelectedPlayer() != m_iPlayerId && PS_PlayersHelper.IsAdminOrServer())
+			{
+				contextMenu.ActionPlayerSelect(m_iPlayerId);
+			}
+		}
+		
+		if (PS_PlayersHelper.IsAdminOrServer() || m_PlayableManager.IsPlayerGroupLeader(m_iCurrentPlayerId))
+			if (m_iPlayerId != -2)
+				contextMenu.ActionLock(m_iPlayableId).Insert(OnActionLock);
+			else
+				contextMenu.ActionUnlock(m_iPlayableId).Insert(OnActionUnlock);
+	}
+	
 }

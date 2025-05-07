@@ -1,6 +1,7 @@
 // Delete after next stable RL update
 modded class PS_GameModeCoop : SCR_BaseGameMode
 {
+	
 	override void OnGameStart()
 	{
 		super.OnGameStart();
@@ -22,4 +23,14 @@ modded class PS_GameModeCoop : SCR_BaseGameMode
 		if (m_bTeamSwitch && !m_bRemoveRedundantUnits) pc.TILW_ShowJIPInfo();
 		else pc.TILW_SendHintToPlayer("JIP Not Available", "This mission does not support join-in-progress, please wait until the next mission starts.", 10);
 	}
+}
+
+class PK_MyData
+{
+    // Static map to store processed IDs
+    static ref map<int, bool> s_ProcessedIDs = new map<int, bool>();
+    
+    // Static helper methods
+    static bool IsIDProcessed(int id) { return s_ProcessedIDs.Contains(id); }
+    static void MarkIDProcessed(int id) { s_ProcessedIDs.Insert(id, true); }
 }

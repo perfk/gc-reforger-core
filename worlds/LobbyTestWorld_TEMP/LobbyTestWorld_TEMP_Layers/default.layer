@@ -31,6 +31,14 @@ Vehicle LAV25_MERDC1 : "{B7A8BAA37CB0AC2B}Prefabs/Vehicles/Wheeled/LAV25/LAV25_M
  coords 1521.34 37.219 2933.416
  angleY 144.42
 }
+SCR_AIGroup : "{C9426F8783461162}Prefabs/Groups/OPFOR/RHS_AFRF/MSV/Flora/P/Group_RHS_RF_MSV_Flora_LightFireTeam_P.et" {
+ coords 1478.252 112.194 2876.766
+ angleY 0
+}
+SCR_AIGroup : "{D05ABE9D4FCD367E}Prefabs/Groups/OPFOR/RHS_AFRF/MSV/Flora/P/Group_RHS_RF_MSV_Flora_RifleSquad_P.et" {
+ coords 1477.676 112.597 2876.609
+ angleY 0
+}
 Turret : "{DF5979FDE2682F70}Prefabs/Vehicles/Wheeled/LAV25/VehParts/Turret/LAV25_turret_base.et" {
  components {
   WCS_Armament_VehicleCameraComponent "{650AA2118A883578}" {
