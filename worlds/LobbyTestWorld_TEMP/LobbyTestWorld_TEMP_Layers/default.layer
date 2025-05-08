@@ -19,6 +19,10 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
  }
  coords 1523.825 37.194 2927.927
 }
+Tank M2A2_MERDC1 : "{5CFD8CB5C3E55A4E}Prefabs/Vehicles/Tracked/BFV/M2A2_MERDC.et" {
+ coords 1531.325 36.469 2992.144
+ angleY -156.712
+}
 SCR_AIGroup : "{7544247CE7FBC839}Prefabs/Groups/OPFOR/USSR/SovietArmy_MotorRiflesBTR_1980ish/P/Group_USSR_MSV80_MotRifleSquad_P.et" {
  coords 1515.161 37.615 2928.193
  angleY -9.716
