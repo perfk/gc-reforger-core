@@ -9,7 +9,7 @@ modded class PS_GameModeCoop : SCR_BaseGameMode
 
 	protected void TILW_OnPlayerConnected(int playerId)
 	{
-		GetGame().GetCallqueue().CallLater(ShowJIPInfo, 15 * 1000, false, playerId);
+		GetGame().GetCallqueue().CallLater(ShowJIPInfo, 5 * 1000, false, playerId);
 	}
 	
 	protected void ShowJIPInfo(int playerId)
@@ -21,5 +21,48 @@ modded class PS_GameModeCoop : SCR_BaseGameMode
 		
 		if (m_bTeamSwitch && !m_bRemoveRedundantUnits) pc.TILW_ShowJIPInfo();
 		else pc.TILW_SendHintToPlayer("JIP Not Available", "This mission does not support join-in-progress, please wait until the next mission starts.", 10);
+	}
+	
+	override void OnGameStateChanged()
+	{
+		super.OnGameStateChanged();
+		
+		SetupTimer();
+	}
+	
+	int m_briefingTimer = 0;
+	protected void SetupTimer()
+	{
+		SCR_EGameModeState state = GetState();
+		if(state == SCR_EGameModeState.GAME)
+			return GetGame().GetCallqueue().Remove(UpdateTimer);
+		
+		if(state != SCR_EGameModeState.BRIEFING)
+			return;
+
+		GetGame().GetCallqueue().CallLater(UpdateTimer, 1000, true);
+	}
+	
+	protected void UpdateTimer()
+	{
+		m_briefingTimer++;
+	}
+	
+	override bool RplSave(ScriptBitWriter writer)
+	{
+		super.RplSave(writer);
+		
+		writer.WriteInt(m_briefingTimer);
+		
+		return true;
+	}
+
+	override bool RplLoad(ScriptBitReader reader)
+	{
+		super.RplLoad(reader);
+		
+		reader.ReadInt(m_briefingTimer);
+
+		return true;
 	}
 }
