@@ -9,7 +9,7 @@ modded class PS_GameModeCoop : SCR_BaseGameMode
 
 	protected void TILW_OnPlayerConnected(int playerId)
 	{
-		GetGame().GetCallqueue().CallLater(ShowJIPInfo, 5 * 1000, false, playerId);
+		GetGame().GetCallqueue().CallLater(ShowJIPInfo, 7.5 * 1000, false, playerId);
 	}
 	
 	protected void ShowJIPInfo(int playerId)
