@@ -1,5 +1,3 @@
 HDREffect : "{9DEECCABE8357209}Common/Postprocess/HDR.emat" {
- VisiblePercentWhite 70
- VisiblePercentBlack 10
  ImageWeightMap "{8EE474586CD656CE}Common/Postprocess/HDR/HDR_MeasureArea_01_Mask.edds"
 }
