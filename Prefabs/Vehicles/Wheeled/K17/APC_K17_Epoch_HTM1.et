@@ -1,0 +1,5 @@
+Vehicle : "{F86AB1BD36B33407}Prefabs/Vehicles/Wheeled/K17/APC_K17_Epoch_HTM.et" {
+ ID "BBCBA43A9778AE21"
+ coords 4130.366 163.76 4038.675
+ angleY 44.715
+}

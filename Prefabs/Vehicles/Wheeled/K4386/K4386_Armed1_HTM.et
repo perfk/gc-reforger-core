@@ -1,0 +1,5 @@
+Vehicle : "{AB5DE68E3E654FCA}Prefabs/Vehicles/Wheeled/K4386/K4386_Armed_HTM.et" {
+ ID "BBCBA43A9778AE21"
+ coords 4121.367 163.739 4043.375
+ angleY 53.53
+}
