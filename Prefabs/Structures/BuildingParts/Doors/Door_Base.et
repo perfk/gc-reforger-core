@@ -1,0 +1,19 @@
+GenericEntity {
+ ID "627CE52CCB2692FE"
+ components {
+  ActionsManagerComponent "{F32B667C3C823800}" {
+   additionalActions {
+    GCC_CrackDoorAction "{655918EEE1BC50DB}" {
+     ParentContextList {
+      "SCR_DoorUserAction"
+     }
+     UIInfo UIInfo "{655918EEE2328DFF}" {
+      Name "Crack"
+     }
+     ActionTitle "Crack Door"
+     "Sort Priority" 5
+    }
+   }
+  }
+ }
+}
