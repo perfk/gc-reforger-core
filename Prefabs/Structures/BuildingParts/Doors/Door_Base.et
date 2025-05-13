@@ -8,9 +8,9 @@ GenericEntity {
       "SCR_DoorUserAction"
      }
      UIInfo UIInfo "{655918EEE2328DFF}" {
-      Name "Peak"
+      Name "Peek"
      }
-     ActionTitle "Peak Door"
+     ActionTitle "Peek Door"
      Duration 3
      PerformPerFrame 1
      "Sort Priority" 5
