@@ -14,6 +14,9 @@ modded class SCR_GarbageSystem : GarbageSystem
 					return -1;
 			}
 		}
+		// Prevent insertion of entities with NoGarbageComponent
+		if (entity.FindComponent(TILW_NoGarbageComponent))
+			return -1;
 
 		return super.OnInsertRequested(entity, lifetime);
 	}
