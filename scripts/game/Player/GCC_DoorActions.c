@@ -1,79 +1,49 @@
-class GCC_CrackDoorAction : ScriptedUserAction
+class GCC_AdjustDoorAction : SCR_AdjustSignalAction
 {
-	override void  PerformContinuousAction(IEntity pOwnerEntity, IEntity pUserEntity, float timeSlice)
+	protected const float STEP = 0.05;
+	protected DoorComponent m_doorComponent;
+	protected float m_lastStep;
+	
+	protected override void Init(IEntity pOwnerEntity, GenericComponent pManagerComponent)
 	{
-		DoorComponent doorComponent = DoorComponent.Cast(pOwnerEntity.FindComponent(DoorComponent));
-		if (!doorComponent)
+		super.Init(pOwnerEntity, pManagerComponent);
+		
+		m_doorComponent = DoorComponent.Cast(pOwnerEntity.FindComponent(DoorComponent));
+		m_fAdjustmentStep = STEP;
+	}
+	
+	override protected bool OnLoadActionData(ScriptBitReader reader)
+	{
+		bool result = super.OnLoadActionData(reader);
+		if(Replication.IsServer())
+			HandleAdjust();
+		return result;
+	}
+	
+	override void OnActionStart(IEntity pUserEntity)
+	{
+		super.OnActionStart(pUserEntity);
+		
+		RplComponent rpl = RplComponent.Cast(pUserEntity.FindComponent(RplComponent));
+		if(!rpl || !rpl.IsOwner())
 			return;
-
-		float control = doorComponent.GetControlValue();
-		control = control + 0.02;
-		if(control >= 0.95)
-			control = 1;
 		
-		doorComponent.SetActionInstigator(pUserEntity);
-		doorComponent.SetControlValue(control);
+		float control = m_doorComponent.GetControlValue();
+		SetSignalValue(control);
+		m_fTargetValue = control;
+		m_lastStep = control;
 	}
 	
-	bool CanBeAction()
+	protected void HandleAdjust()
 	{
-		DoorComponent doorComponent = DoorComponent.Cast(GetOwner().FindComponent(DoorComponent));
-		if (doorComponent)
-		{
-			if(doorComponent.GetControlValue() < 1)
-				return true;
-		}
-		
-		return false;
-	}
-	
-	override bool CanBePerformedScript(IEntity user)
-	{
-		return CanBeAction();
-	}
-	
-	override bool CanBeShownScript(IEntity user)
-	{
-		return CanBeAction();
-	}
-}
-
-class GCC_EaseDoorAction : ScriptedUserAction
-{
-	override void PerformContinuousAction(IEntity pOwnerEntity, IEntity pUserEntity, float timeSlice)
-	{
-		DoorComponent doorComponent = DoorComponent.Cast(pOwnerEntity.FindComponent(DoorComponent));
-		if (!doorComponent)
+		if(!Replication.IsServer())
 			return;
-
-		float control = doorComponent.GetControlValue();
-		control = control - 0.02;
-		if(control <= 0.05)
-			control = 0;
 		
-		doorComponent.SetActionInstigator(pUserEntity);
-		doorComponent.SetControlValue(control);
-	}
-	
-	bool CanBeAction()
-	{
-		DoorComponent doorComponent = DoorComponent.Cast(GetOwner().FindComponent(DoorComponent));
-		if (doorComponent)
-		{
-			if(doorComponent.GetControlValue() > 0)
-				return true;
-		}
+		float currentStep = SCR_GetCurrentValue();
+		if(currentStep == m_lastStep)
+			return;
 		
-		return false;
-	}
-	
-	override bool CanBePerformedScript(IEntity user)
-	{
-		return CanBeAction();
-	}
-	
-	override bool CanBeShownScript(IEntity user)
-	{
-		return CanBeAction();
+		m_lastStep = currentStep;
+		m_doorComponent.SetControlValue(currentStep);
 	}
 }

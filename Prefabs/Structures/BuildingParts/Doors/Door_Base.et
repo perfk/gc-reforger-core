@@ -1,31 +1,23 @@
 GenericEntity {
  ID "627CE52CCB2692FE"
  components {
+  SignalsManagerComponent "{655E050163DEE0CD}" {
+  }
   ActionsManagerComponent "{F32B667C3C823800}" {
    additionalActions {
-    GCC_CrackDoorAction "{655918EEE1BC50DB}" {
+    GCC_AdjustDoorAction "{655E050E81E045A1}" {
      ParentContextList {
       "SCR_DoorUserAction"
      }
-     UIInfo UIInfo "{655918EEE2328DFF}" {
-      Name "Peek"
+     UIInfo UIInfo "{655E050E872F13BA}" {
+      Name "Adjust"
      }
-     ActionTitle "Peek Door"
-     Duration 3
+     Duration -1
      PerformPerFrame 1
-     "Sort Priority" 5
-    }
-    GCC_EaseDoorAction "{65592A1F3679B382}" {
-     ParentContextList {
-      "SCR_DoorUserAction"
-     }
-     UIInfo UIInfo "{65592A1F3CAC5582}" {
-      Name "Ease"
-     }
-     ActionTitle "Ease Door"
-     Duration 3
-     PerformPerFrame 1
-     "Sort Priority" 6
+     "Sort Priority" 2
+     "Signal name" "adjust"
+     m_fAdjustmentStep 0.05
+     m_bManualAdjustment 1
     }
    }
   }
