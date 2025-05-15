@@ -78,4 +78,80 @@ modded class PS_CoopLobby
 		m_wRatioCounter = TextWidget.Cast(m_wRoot.FindAnyWidget("RatioCounter"));
 		SetRatio();
 	}
+	
+
+	
+	
+
+	override void InitPlayables()
+	{
+		array<PS_PlayableContainer> playables = m_PlayableManager.GetPlayablesSorted();
+		map<RplId, ref PS_PlayableVehicleContainer> playableVehicles = m_PlayableManager.GetPlayableVehicles();
+		map<SCR_Faction, ref Tuple3<int, int, int>> factions = new map<SCR_Faction, ref Tuple3<int, int, int>>();
+		
+		
+		
+		foreach (PS_PlayableContainer playable : playables)
+		{
+			AddPlayable(playable);
+			
+			
+			int playerId = m_PlayableManager.GetPlayerByPlayable(playable.GetRplId());
+			
+			if (!PK_MyData.IsIDProcessed(playable.GetRplId())) {
+				PK_MyData.MarkIDProcessed(playable.GetRplId());
+				m_PlayableControllerComponent.SetPlayablePlayer(playable.GetRplId(), -2);
+				playerId = -2;
+			}
+			
+			
+			int playerAdded = 0;
+			int playerAddedMax = 1;
+			int playerAddedLocked = 0;
+			if (playerId >= 0)
+				playerAdded = 1;
+			if (playerId == -2)
+				playerAddedLocked = 1;
+
+
+			
+			
+			SCR_Faction faction = playable.GetFaction();
+			if (!factions.Contains(faction))
+			{
+				factions.Insert(faction, new Tuple3<int, int, int>(playerAdded, playerAddedMax, playerAddedLocked));
+			}
+			else
+			{
+				Tuple3<int, int, int> tuple = factions.Get(faction);
+				tuple.param1 += playerAdded;
+				tuple.param2 += playerAddedMax;
+				tuple.param3 += playerAddedLocked;
+			}
+			
+
+		}
+
+
+		
+			
+		
+		foreach (RplId rplId, PS_PlayableVehicleContainer playableVehicleContainer : playableVehicles)
+		{
+			AddPlayableVehicle(playableVehicleContainer);
+		}
+		
+		foreach (SCR_Faction faction, Tuple3<int, int, int> count : factions)
+		{
+			AddFaction(faction, count.param1, count.param2, count.param3);
+		}
+		
+		// Added in runtime
+		m_PlayableManager.GetOnPlayableRegistered().Remove(OnPlayableRegistered);
+		m_PlayableManager.GetOnPlayableRegistered().Insert(OnPlayableRegistered);
+	}
+	
+	
+	
+	
 }

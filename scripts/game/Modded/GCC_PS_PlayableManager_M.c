@@ -1,26 +1,46 @@
+modded class PS_PlayableManager
+{
+	bool IsPlayerCompanyLeader(int thisPlayerId)
+	{
+ 		array<PS_PlayableContainer> playables = GetPlayablesSorted();
+        if (playables.Count() == 0)
+            return false;
+
+        protected RplId newestInFaction;
+        foreach (PS_PlayableContainer playable : playables)
+        {
+            if (playable.GetFactionKey() == GetPlayerFactionKey(thisPlayerId))
+                newestInFaction = playable.GetRplId();
+        }
+		
+		Print("Perfk newestInFaction : " + newestInFaction + " - " + thisPlayerId);
+		if(newestInFaction == thisPlayerId)
+        	return true;
+		else
+			return false;
+	}
+}
+
 /*
 modded class PS_PlayableManager
 {
-	[Attribute("1")]
-	bool m_hidePlayersOnSpawn;
-	
-	override void RegisterPlayable(PS_PlayableComponent playableComponent)
-	{
-		super.RegisterPlayable(playableComponent);
-		
-		if(!m_hidePlayersOnSpawn)
-			return;
-		
-		if (Replication.IsServer())
-		{
-			IEntity entity = playableComponent.GetOwner();
-			Physics physics = entity.GetPhysics();
-			if (physics)
-			{
-				physics.EnableGravity(false);
-				entity.SetOrigin(entity.GetOrigin() + vector.Up * 100000);
-			}
-		}
-	}
+    bool IsPlayerCompanyLeader(int thisPlayerId)
+    {
+        array<PS_PlayableContainer> playables = GetPlayablesSorted();
+        if (playables.Count() == 0)
+            return false;
+
+        PS_PlayableContainer newestInFaction;
+        foreach (PS_PlayableContainer playable : playables)
+        {
+            if (playable.GetFactionKey() == GetPlayerFactionKey(m_iCurrentPlayerId))
+                newestInFaction = playable;
+        }
+		Print(Perfk newestInFaction : " + newestInFaction.GetRplId() + " - " + thisPlayerId);
+		if(newestInFaction.GetRplId() == thisPlayerId)
+        	return true;
+		else
+			return false;
+    }
 }
 */
