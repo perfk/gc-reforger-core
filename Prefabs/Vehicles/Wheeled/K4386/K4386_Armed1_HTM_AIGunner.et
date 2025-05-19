@@ -6,6 +6,13 @@ Vehicle : "{AB5DE68E3E654FCA}Prefabs/Vehicles/Wheeled/K4386/K4386_Armed.et" {
     Name "HTM's Typhoon (K486)"
    }
   }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Turret {
+     Prefab "{53F57A587543DA5A}Prefabs/Vehicles/Wheeled/K4386/VehParts/K4386_Turret_HTM.et"
+    }
+   }
+  }
  }
  coords 4121.367 163.739 4043.375
  angleY 53.53
