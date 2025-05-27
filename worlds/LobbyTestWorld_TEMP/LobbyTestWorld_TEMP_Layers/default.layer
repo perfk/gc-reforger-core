@@ -1,8 +1,8 @@
-SCR_AIGroup : "{2FA8727C0B695783}Prefabs/Groups/BLUFOR/British Forces/1989/Group_UK_1989_REG_RiflePHQ.et" {
- coords 1442.958 38.693 2941.254
- m_aStaticWaypoints {
-  "d1"
- }
+GenericEntity : "{1C0ED8B15F763C9F}Prefabs/Weapons/Rifles/M4A1/Rifle_M4A1_BLOCK_II_H.et" {
+ coords 1430.11 38.417 2969.387
+ angleX 77.807
+ angleY 166.813
+ angleZ 180
 }
 SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base.et" {
  components {
@@ -17,23 +17,48 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
    }
   }
  }
- coords 1523.825 37.194 2927.927
+ coords 1433.816 37.925 2973.21
 }
-Tank M2A2_MERDC1 : "{5CFD8CB5C3E55A4E}Prefabs/Vehicles/Tracked/BFV/M2A2_MERDC.et" {
- coords 1531.325 36.469 2992.144
- angleY -156.712
+SCR_AIGroup : "{546136191CC15D5C}Prefabs/Groups/INDFOR/GC_TKA/New Takistan Army 2012-Present (NTA)/Group_GC_NTA_RifleSquad.et" {
+ coords 1322.564 38.286 2962.998
+ angleY -56.856
+ m_aStaticWaypoints {
+  "d1"
+ }
 }
-SCR_AIGroup : "{7544247CE7FBC839}Prefabs/Groups/OPFOR/USSR/SovietArmy_MotorRiflesBTR_1980ish/P/Group_USSR_MSV80_MotRifleSquad_P.et" {
- coords 1515.161 37.615 2928.193
- angleY -9.716
+SCR_AIGroup : "{6E4EF673050EC9D3}Prefabs/Groups/BLUFOR/US/Army_2020_Rifles/P/Group_USA_2020_RifleSquad_P.et" {
+ coords 1436.978 37.942 2972.723
+ angleY -99.648
+ m_sCustomNameSet "Test"
+ m_bSetPlayable 1
+}
+GenericEntity : "{8057729A38DAC5BC}Prefabs/Weapons/Rifles/M4A1/GC_US_Army_Rifle_M4A1_04.et" {
+ coords 1431.153 38.36 2970.943
+ angleX 74.235
+ angleY -10.672
+ angleZ -89.231
+}
+GenericEntity : "{89CBE5C1B31D42D2}Prefabs/Weapons/Rifles/M4A1/GC_US_Army_Rifle_M4A1_M203_03.et" {
+ coords 1430.697 38.362 2970.853
+ angleX 74.235
+ angleY -10.672
+ angleZ -89.231
 }
 SCR_DefendWaypoint d1 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
- coords 1437.791 38.398 2941.377
+ coords 1344.425 37.851 2965.566
  CompletionRadius 20
 }
-Vehicle LAV25_MERDC1 : "{B7A8BAA37CB0AC2B}Prefabs/Vehicles/Wheeled/LAV25/LAV25_MERDC.et" {
- coords 1521.34 37.219 2933.416
- angleY 144.42
+GenericEntity : "{B4FFC0F9C671CBE5}Prefabs/Weapons/Rifles/M4A1/GC_US_Army_Rifle_M4A1_M203_04.et" {
+ coords 1430.342 38.363 2970.781
+ angleX 74.235
+ angleY -10.672
+ angleZ -89.231
+}
+GenericEntity : "{BD6357A24DB64C8B}Prefabs/Weapons/Rifles/M4A1/GC_US_Army_Rifle_M4A1_03.et" {
+ coords 1430.005 38.364 2970.711
+ angleX 74.235
+ angleY -10.672
+ angleZ -89.231
 }
 Turret : "{DF5979FDE2682F70}Prefabs/Vehicles/Wheeled/LAV25/VehParts/Turret/LAV25_turret_base.et" {
  components {
