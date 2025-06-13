@@ -1,0 +1,16 @@
+Tree {
+ ID "2272273384468550"
+ components {
+  RigidBody "{4EFA6762916D17E5}" {
+   Layers 537133056
+  }
+  SCR_SpecialCollisionHandlerComponent "{659AF0AC3FFAF3E7}" {
+   m_aSpecialCollisions {
+    GC_BushCollisionEffect "{659AF0AC3D0E1379}" {
+     m_fSpecialCollisionMaxSpeedLimitScaled 0.22
+     m_sOnDamageSoundEvent "SOUND_LEAFYTREE_SMALL_LP"
+    }
+   }
+  }
+ }
+}
