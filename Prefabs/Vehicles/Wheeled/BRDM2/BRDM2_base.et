@@ -1,0 +1,73 @@
+Vehicle : "{543A50BF3A42AD47}Prefabs/Vehicles/Core/Wheeled_APC_Base.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   additionalActions {
+    WCS_Armament_VehicleCameraAction "{64C89DC4B57AF02A}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4D0EF3398}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4D1298DCB}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4DE39FF1B}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4DC11A50C}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4DD4B2B1E}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4DA7433A5}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4DB105BDF}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4D8629035}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4D9682CC7}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4A662D4F2}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4A7151300}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4A4066E28}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4A5060D0F}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC4A213BBE5}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{64C89DC59003A444}" {
+     ParentContextList {
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,49 @@
+Vehicle : "{543A50BF3A42AD47}Prefabs/Vehicles/Core/Wheeled_APC_Base.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   additionalActions {
+    WCS_Armament_VehicleCameraAction "{633404F61FD40D30}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{633404F6329B570A}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{633404F633FBF1B4}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{633404F630FFA50E}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{633404F6318EA24B}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{633404F63E84FCD4}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{633404F63F83982D}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{633404F63CBE5054}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{633404F63C4A58E3}" {
+     ParentContextList {
+     }
+    }
+    WCS_Armament_VehicleCameraAction "{633404F63D5E157E}" {
+     ParentContextList {
+     }
+    }
+   }
+  }
+ }
+}
