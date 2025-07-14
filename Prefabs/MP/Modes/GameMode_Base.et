@@ -28,8 +28,11 @@ SCR_BaseGameMode {
    }
   }
   SCR_VotingManagerComponent "{5650BB6B6089393A}" {
+   Enabled 0
+  }
+  SCR_VotingManagerComponent "{65DD1D6E2C3AEED4}" {
    m_aVotingTemplates {
-    SCR_VotingAdmin "{62F763926B120B77}" {
+    SCR_VotingAdmin "{65DD1D6E2E836EBB}" {
      m_Type ADMIN
      m_bIsValuePlayerID 1
      m_fDuration 60

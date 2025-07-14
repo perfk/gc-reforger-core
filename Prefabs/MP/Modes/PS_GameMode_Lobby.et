@@ -4,9 +4,6 @@ PS_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
   SCR_HintManagerComponent "{5702B54C6CBC9D7F}" {
    m_bIgnoreHintSettings 1
   }
-  SCR_VotingManagerComponent "{5650BB6B6089393A}" {
-   Enabled 1
-  }
  }
  m_bAllowFactionChange 1
  m_bTeamSwitch 1
