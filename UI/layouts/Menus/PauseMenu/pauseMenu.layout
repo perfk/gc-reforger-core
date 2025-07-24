@@ -74,8 +74,8 @@ FrameWidgetClass {
     OffsetLeft 0
     PositionY 0
     OffsetTop 0
-    SizeX 1265.1
-    OffsetRight -1265.1
+    SizeX 817.032
+    OffsetRight -817.032
     SizeY 0
     OffsetBottom 0
    }
@@ -118,8 +118,8 @@ FrameWidgetClass {
     OffsetLeft 0
     PositionY 0
     OffsetTop 0
-    SizeX 717.448
-    OffsetRight -717.448
+    SizeX 476.591
+    OffsetRight -476.591
     SizeY 0
     OffsetBottom 0
    }
@@ -138,17 +138,17 @@ FrameWidgetClass {
       VerticalLayoutWidgetClass "{65F0D807665180B1}" {
        Name "Logo"
        Slot LayoutSlot "{65F0F9C737FC9199}" {
-        Padding 0 0 0 50
+        Padding 0 0 0 30
        }
        Color 1 1 1 0
        {
         ImageWidgetClass "{65F0D8076D2D35EB}" {
-         Name "Image0"
+         Name "Banner"
          Slot LayoutSlot "{65F0D8076D2D35C8}" {
-          Padding 50 50 0 0
+          Padding 40 40 0 0
          }
          Texture "{F6E6F3624F06FF4F}UI/Icons/GC_Banner.edds"
-         Size 666 220
+         Size 400 132
         }
         HorizontalLayoutWidgetClass "{65F0D807E587C3C4}" {
          Name "HorizontalLayout0"
@@ -192,7 +192,7 @@ FrameWidgetClass {
              Slot ButtonWidgetSlot "{65F0EA94088654D0}" {
              }
              Texture "{E07EB01521813891}UI/Icons/discord.edds"
-             Size 64 64
+             Size 48 48
             }
            }
           }
@@ -229,7 +229,7 @@ FrameWidgetClass {
              Slot ButtonWidgetSlot "{65F0DBDD75081D0A}" {
              }
              Texture "{535A6A3524DCFB69}UI/Icons/youtube.edds"
-             Size 72 64
+             Size 56 48
             }
            }
           }
@@ -265,7 +265,7 @@ FrameWidgetClass {
              Slot ButtonWidgetSlot "{65F0DBDD75081D0A}" {
              }
              Texture "{4C28CDD94B52B8C6}UI/Icons/x.edds"
-             Size 64 64
+             Size 48 48
             }
            }
           }
