@@ -4,14 +4,15 @@ FrameWidgetClass {
   ButtonWidgetClass "{65F27E08AE1303A7}" {
    Name "AdminTools"
    Slot FrameWidgetSlot "{65F2DE3B186A1BA1}" {
-    PositionX 1602.51
-    OffsetLeft 1602.51
-    PositionY 0.16
-    OffsetTop 0.16
-    SizeX 317.61
-    OffsetRight -1920.12
-    SizeY 82.051
-    OffsetBottom -82.211
+    Anchor 1 0 1 0
+    PositionX -317.5
+    OffsetLeft -317.5
+    PositionY 10
+    OffsetTop 10
+    SizeX 305.865
+    OffsetRight 11.635
+    SizeY 82.1
+    OffsetBottom -92.1
    }
    "Z Order" -1
    Clipping False
