@@ -18,7 +18,7 @@ SCR_ChimeraCharacter {
      SensorsList {
       EyesSensor "{520EA1D2DB109AAD}" {
        FOVNormal 100
-       FOVPeripheral 170
+       FOVPeripheral 150
        AngularSizeFactor_a 0.045
        AngularSizeFactor_c 0.06
        AngularVelocityFactor_a 1500
@@ -56,5 +56,4 @@ SCR_ChimeraCharacter {
    }
   }
  }
- coords 1339.518 37.717 2971.054
 }
