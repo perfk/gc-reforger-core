@@ -1,0 +1,24 @@
+Tree : "{D7163D1B571F4C0C}Prefabs/Vegetation/Core/Bush_Base.et" {
+ ID "0F2AA6B42CA78628"
+ {
+  Tree {
+   ID "665D00A17E97794D"
+   components {
+    RigidBody "{665D00A1B4B2B2EE}" {
+     ResponseIndex "SmallDestructible"
+     Geometries {
+      PhysicsCapsuleGeometry collider {
+       LayerPreset "Tree"
+       Offset 0 1 0
+       Radius 0.2
+       Height 2
+      }
+     }
+     Static 1
+    }
+   }
+   Enabled 0
+   MaxHealth 200
+  }
+ }
+}

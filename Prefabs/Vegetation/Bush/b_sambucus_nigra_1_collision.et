@@ -1,0 +1,25 @@
+Tree : "{D7163D1B571F4C0C}Prefabs/Vegetation/Core/Bush_Base.et" {
+ ID "2272273384468550"
+ {
+  Tree {
+   ID "665D00A25E01CD43"
+   components {
+    RigidBody "{665D00A2AE82C6AC}" {
+     ResponseIndex "SmallDestructible"
+     Geometries {
+      PhysicsCapsuleGeometry collider {
+       LayerPreset "Tree"
+       SurfaceProperties "{7606C18BA0EF2211}Common/Materials/Game/wood_logs.gamemat"
+       Offset 0 0.5 0
+       Radius 0.2
+      }
+     }
+     Static 1
+    }
+   }
+   Enabled 0
+   MaxHealth 200
+   DamageThreshold 10
+  }
+ }
+}
