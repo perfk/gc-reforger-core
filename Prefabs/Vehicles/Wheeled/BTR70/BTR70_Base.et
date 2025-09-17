@@ -2,6 +2,44 @@ Vehicle : "{543A50BF3A42AD47}Prefabs/Vehicles/Core/Wheeled_APC_Base.et" {
  ID "BBCBA43A9778AE21"
  components {
   SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
+   DoorInfoList {
+    CompartmentDoorInfo "{61CD441116E06C52}" {
+     GetInTeleport 1
+    }
+    CompartmentDoorInfo "{61CD440901036D55}" {
+     GetInTeleport 1
+    }
+    CompartmentDoorInfo "{61CD44093963B30E}" {
+     GetInTeleport 1
+    }
+    CompartmentDoorInfo "{61CD440CEAC54E70}" {
+     GetInTeleport 1
+    }
+    CompartmentDoorInfo "{61CD440CE582B848}" {
+     GetInTeleport 1
+    }
+    CompartmentDoorInfo "{61CD440C9B19DBFD}" {
+     GetInTeleport 1
+    }
+    CompartmentDoorInfo "{61CD440C25A9F93A}" {
+     GetInTeleport 1
+    }
+    CompartmentDoorInfo "{61CD440DFCDDA64A}" {
+     GetInTeleport 1
+    }
+    CompartmentDoorInfo "{61CD440DF55BF8AC}" {
+     GetInTeleport 1
+    }
+    CompartmentDoorInfo "{61CD440DED602274}" {
+     GetInTeleport 1
+    }
+    CompartmentDoorInfo "{61CD440DE5C95BE2}" {
+     GetInTeleport 1
+    }
+    CompartmentDoorInfo "{61CD440D9FD7DADC}" {
+     GetInTeleport 1
+    }
+   }
    CompartmentSlots {
     CargoCompartmentSlot passenger_l006 {
      DoorInfoList {
