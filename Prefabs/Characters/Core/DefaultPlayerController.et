@@ -6,6 +6,15 @@ SCR_PlayerController {
     SCR_VonDisplay "{5214DC4699840218}" {
      m_bShowEnemyNames 0
     }
+    SCR_RestrictionZoneWarningHUDComponent "{56CAD2AB886446BF}" {
+     m_aWarningUIInfos {
+      SCR_RestrictionZoneWarningInfo "{59AAD42146C49B5D}" {
+       m_UIInfo SCR_UIInfo "{59AAD4214391DF36}" {
+        Description "You are restricted to this area!"
+       }
+      }
+     }
+    }
    }
   }
  }
