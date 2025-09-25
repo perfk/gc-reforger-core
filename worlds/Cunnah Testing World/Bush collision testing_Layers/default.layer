@@ -1,4 +1,9 @@
-Vehicle UAZ452_ambulance1 : "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et" {
- coords 2032.658 55.334 2123.865
- angleY 70.371
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 11025.217 23.563 11910.155
+}
+Vehicle SP01_UAZ469_USSR1 : "{208FEE0BF258449B}Prefabs/SP01/SP01_UAZ469_USSR.et" {
+ coords 11029.123 23.957 11925.485
+}
+SCR_AIGroup : "{B919E00642247722}Prefabs/Groups/BLUFOR/US/Army/1998/Infantry (Desert)/P/Group_US_Army_1998_Desert_RiflePHQ_P.et" {
+ coords 11029.96 23.561 11912.114
 }
