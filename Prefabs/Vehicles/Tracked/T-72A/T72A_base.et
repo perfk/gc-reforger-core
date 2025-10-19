@@ -4,6 +4,8 @@ Tank : "{8A883ABED22B6E27}Prefabs/Vehicles/Core/Tracked_Base.et" {
   SCR_WheeledDamageManagerComponent "{141326E9FD94FE40}" {
    "Additional hit zones" {
     SCR_FlammableHitZone Hull {
+     ColliderNames {
+     }
     }
    }
   }
