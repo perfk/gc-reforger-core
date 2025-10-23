@@ -1,0 +1,42 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 1190.487 39 2701.625
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 1190.388 39 2705.725
+}
+PS_GameModeCoop PS_GameMode_Lobby_GC1 : "{4CFD54745CD45673}Prefabs/MP/Modes/PS_GameMode_Lobby_GC.et" {
+ coords 1190.641 39 2700.095
+}
+Tank M1A2 : "{12F73C9958E56455}Prefabs/Vehicles/Tracked/M1A2/M1A2.et" {
+ coords 1147.537 38.523 2768.125
+}
+Vehicle Mi24P_base1 : "{38DE44985B0AD338}Prefabs/Vehicles/Helicopters/Mi24/Mi24P_base.et" {
+ components {
+  SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
+   DoorInfoList {
+    CompartmentDoorInfo "{628F44AF4D982399}" {
+     GetOutTeleport 1
+    }
+   }
+  }
+ }
+ coords 1199.515 39 2717.519
+}
+SCR_AIGroup : "{6E5FAA403D1014FF}Prefabs/Groups/BLUFOR/British Forces/1983/P/Light Infantry/Group_UK_1983_REG_RifleSection_P.et" {
+ coords 1190.388 39 2698.61
+}
+Tank M1A1_TUSK1 : "{8C56ABBA9DFE03D8}Prefabs/Vehicles/Tracked/M1A1/M1A1_TUSK.et" {
+ coords 1160.034 38.507 2769.201
+}
+Tank T72A_Desert1 : "{AF1C02364D45CC5B}Prefabs/Vehicles/Tracked/T-72A/T72A_Desert.et" {
+ coords 1169.303 39 2706.176
+}
+Tank M1A1 : "{B47B16E8DB493898}Prefabs/Vehicles/Tracked/M1A1/M1A1.et" {
+ coords 1169.729 38.823 2765.113
+}
+Tank M1A2_TUSKII1 : "{DF904EC4C4A8CB7D}Prefabs/Vehicles/Tracked/M1A2/M1A2_TUSKII.et" {
+ coords 1197.043 39 2741.456
+}
+Tank M1A2_TUSK1 : "{F9FF4BDD5F962A2D}Prefabs/Vehicles/Tracked/M1A2/M1A2_TUSK.et" {
+ coords 1180.684 39 2747.29
+}
