@@ -1,3 +1,4 @@
+/*
 modded class SCR_VonDisplay
 {
 	override void OnReceive(int playerId, BaseTransceiver receiver, int frequency, float quality)
@@ -8,3 +9,4 @@ modded class SCR_VonDisplay
 		super.OnReceive(playerId, receiver, frequency, quality);
 	}
 }
+*/
