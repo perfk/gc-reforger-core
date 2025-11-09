@@ -1,0 +1,56 @@
+FrameWidgetClass {
+ {
+  VerticalLayoutWidgetClass "{59389903A80C9C04}" {
+   Prefab "{59389903A80C9C04}"
+   {
+    FrameWidgetClass "{000000006691B0F4}" {
+     Prefab "{000000006691B0F4}"
+     {
+      VerticalLayoutWidgetClass "{593899036CFAA424}" {
+       Prefab "{593899036CFAA424}"
+       {
+        HorizontalLayoutWidgetClass "{0000000060427AFD}" {
+         Prefab "{0000000060427AFD}"
+         {
+          ImageWidgetClass "{656EB389D8087E58}" {
+           Prefab "{656EB389D8087E58}"
+           "Is Enabled" 0
+           "Is Visible" 0
+          }
+          ImageWidgetClass "{6568853A15FF326E}" {
+           Prefab "{6568853A15FF326E}"
+           "Is Enabled" 0
+           "Is Visible" 0
+          }
+          TextWidgetClass "{656885223F5F8AC1}" {
+           Prefab "{656885223F5F8AC1}"
+           "Is Enabled" 0
+           "Is Visible" 0
+          }
+          OverlayWidgetClass "{615AA498402E141D}" {
+           Prefab "{615AA498402E141D}"
+           "Is Enabled" 0
+           "Is Visible" 0
+           {
+            ImageWidgetClass "{615AA4984798A8D8}" {
+             Prefab "{615AA4984798A8D8}"
+             "Is Enabled" 0
+             "Is Visible" 0
+            }
+           }
+          }
+          OverlayWidgetClass "{599ACE67769EE404}" {
+           Prefab "{599ACE67769EE404}"
+           "Is Enabled" 0
+           "Is Visible" 0
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
