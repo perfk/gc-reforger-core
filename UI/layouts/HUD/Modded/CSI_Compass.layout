@@ -1,9 +1,0 @@
-FrameWidgetClass {
- {
-  TextWidgetClass "{5EBD2BF287B38B83}" {
-   Prefab "{5EBD2BF287B38B83}"
-   "Is Enabled" 0
-   "Is Visible" 0
-  }
- }
-}
