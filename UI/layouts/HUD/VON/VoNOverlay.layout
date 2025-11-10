@@ -17,6 +17,11 @@ FrameWidgetClass {
            "Is Enabled" 0
            "Is Visible" 0
           }
+          TextWidgetClass "{599C84CFFAF1151B}" {
+           Prefab "{599C84CFFAF1151B}"
+           "Is Enabled" 0
+           "Is Visible" 0
+          }
           ImageWidgetClass "{6568853A15FF326E}" {
            Prefab "{6568853A15FF326E}"
            "Is Enabled" 0
@@ -38,6 +43,11 @@ FrameWidgetClass {
              "Is Visible" 0
             }
            }
+          }
+          TextWidgetClass "{56FCAED04961AF39}" {
+           Prefab "{56FCAED04961AF39}"
+           "Is Enabled" 0
+           "Is Visible" 0
           }
           OverlayWidgetClass "{599ACE67769EE404}" {
            Prefab "{599ACE67769EE404}"
