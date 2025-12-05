@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{B68D8F69063D2FB2}Prefabs/Characters/Vests/Belts/Webbing/Virtus_H_Rig/Webbing_Virtus_H_Rig_Base.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+  EntityTemplateResourceClass Xbox : PC {
+  }
+ }
+}
