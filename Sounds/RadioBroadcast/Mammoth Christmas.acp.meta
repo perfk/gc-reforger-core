@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{EF6AF14C9814C0A3}Sounds/RadioBroadcast/Mammoth Christmas.acp"
+ Configurations {
+  AudioProjectResourceClass PC {
+  }
+  AudioProjectResourceClass XBOX_ONE : PC {
+  }
+  AudioProjectResourceClass XBOX_SERIES : PC {
+  }
+  AudioProjectResourceClass PS4 : PC {
+  }
+  AudioProjectResourceClass PS5 : PC {
+  }
+  AudioProjectResourceClass HEADLESS : PC {
+  }
+  AudioProjectResourceClass Xbox : PC {
+  }
+ }
+}
