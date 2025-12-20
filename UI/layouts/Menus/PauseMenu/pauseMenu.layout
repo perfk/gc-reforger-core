@@ -212,15 +212,14 @@ FrameWidgetClass : "{E81F33FD5F8C893B}UI/layouts/Menus/PauseMenu/pauseMenu.layou
        Slot LayoutSlot "{65F0F9C737FC9199}" {
         Padding 0 0 0 30
        }
-       Color 1 1 1 0
        {
         ImageWidgetClass "{6708941EE52854EA}" {
          Name "Banner"
          Slot LayoutSlot "{65F0D8076D2D35C8}" {
-          Padding 40 40 0 0
+          Padding 25 25 0 0
          }
          Texture "{F6E6F3624F06FF4F}UI/Icons/GC_Banner.edds"
-         Size 400 132
+         Size 300 153
         }
         HorizontalLayoutWidgetClass "{6708941EE52854E9}" {
          Name "HorizontalLayout0"
