@@ -1,0 +1,910 @@
+Tank : "{8A883ABED22B6E27}Prefabs/Vehicles/Core/Tracked_Base.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
+   DoorInfoList {
+    CompartmentDoorInfo "{685D4028B150401F}" {
+     ContextName "door_pl006"
+     EntryPositionInfo PointInfo "{685D402F29CF6E9E}" {
+      Offset -2.25 0 0.2858
+     }
+     ExitPositionInfo PointInfo "{685D402F3312205E}" {
+      Offset -2.25 0 0.2858
+     }
+     GetInTeleport 1
+     GetOutTeleport 1
+     FakeDoor 1
+     AccessibilitySettings CompartmentAccessibilityContext "{685D4028B7D474F2}" {
+     }
+    }
+    CompartmentDoorInfo "{685D73103CB0B48A}" {
+     ContextName "door_pr006"
+     EntryPositionInfo PointInfo "{685D73103CB0B44F}" {
+      Offset 2.25 0 0.2858
+     }
+     ExitPositionInfo PointInfo "{685D73103CB0B44C}" {
+      Offset 2.25 0 0.2858
+     }
+     GetInTeleport 1
+     GetOutTeleport 1
+     FakeDoor 1
+     AccessibilitySettings CompartmentAccessibilityContext "{685D73103CB0B452}" {
+     }
+    }
+    CompartmentDoorInfo "{685D402813A6AFA4}" {
+     ContextName "door_pl007"
+     EntryPositionInfo PointInfo "{685D402813A6AFF9}" {
+      Offset -2.25 0 -0.4494
+     }
+     ExitPositionInfo PointInfo "{685D402813A6AFFF}" {
+      Offset -2.25 0 -0.4494
+     }
+     GetInTeleport 1
+     GetOutTeleport 1
+     FakeDoor 1
+     AccessibilitySettings CompartmentAccessibilityContext "{685D402813A6AFFC}" {
+     }
+    }
+    CompartmentDoorInfo "{685D7310102B66D1}" {
+     ContextName "door_pr007"
+     EntryPositionInfo PointInfo "{685D7310102B6699}" {
+      Offset 2.25 0 -0.4494
+     }
+     ExitPositionInfo PointInfo "{685D7310102B669E}" {
+      Offset 2.25 0 -0.4494
+     }
+     GetInTeleport 1
+     GetOutTeleport 1
+     FakeDoor 1
+     AccessibilitySettings CompartmentAccessibilityContext "{685D7310102B66A3}" {
+     }
+    }
+    CompartmentDoorInfo "{685D402875814425}" {
+     ContextName "door_pl008"
+     EntryPositionInfo PointInfo "{685D402875814464}" {
+      Offset -2.25 0 -1.0693
+     }
+     ExitPositionInfo PointInfo "{685D40287581447A}" {
+      Offset -2.25 0 -1.0693
+     }
+     GetInTeleport 1
+     GetOutTeleport 1
+     FakeDoor 1
+     AccessibilitySettings CompartmentAccessibilityContext "{685D40287581447F}" {
+     }
+    }
+    CompartmentDoorInfo "{685D73101BFB1252}" {
+     ContextName "door_pr008"
+     EntryPositionInfo PointInfo "{685D73101BFB1219}" {
+      Offset 2.25 0 -1.0693
+     }
+     ExitPositionInfo PointInfo "{685D73101BFB121D}" {
+      Offset 2.25 0 -1.0693
+     }
+     GetInTeleport 1
+     GetOutTeleport 1
+     FakeDoor 1
+     AccessibilitySettings CompartmentAccessibilityContext "{685D73101BFB1222}" {
+     }
+    }
+    CompartmentDoorInfo "{685D402879BB49C6}" {
+     ContextName "door_pl009"
+     EntryPositionInfo PointInfo "{685D402879BB4E10}" {
+      Offset -2.25 0 -1.8254
+     }
+     ExitPositionInfo PointInfo "{685D402879BB4E14}" {
+      Offset -2.25 0 -1.8254
+     }
+     GetInTeleport 1
+     GetOutTeleport 1
+     FakeDoor 1
+     AccessibilitySettings CompartmentAccessibilityContext "{685D402879BB4E69}" {
+     }
+    }
+    CompartmentDoorInfo "{685D73106329E163}" {
+     ContextName "door_pr009"
+     EntryPositionInfo PointInfo "{685D73106329E12A}" {
+      Offset 2.25 0 -1.8254
+     }
+     ExitPositionInfo PointInfo "{685D73106329E12D}" {
+      Offset 2.25 0 -1.8254
+     }
+     GetInTeleport 1
+     GetOutTeleport 1
+     FakeDoor 1
+     AccessibilitySettings CompartmentAccessibilityContext "{685D73106329E132}" {
+     }
+    }
+    CompartmentDoorInfo "{685D40287B1D455C}" {
+     ContextName "door_pl010"
+     EntryPositionInfo PointInfo "{685D40287B1D4597}" {
+      Offset -2.25 0 -2.3186
+     }
+     ExitPositionInfo PointInfo "{685D40287B1D4595}" {
+      Offset -2.25 0 -2.3186
+     }
+     GetInTeleport 1
+     GetOutTeleport 1
+     FakeDoor 1
+     AccessibilitySettings CompartmentAccessibilityContext "{685D40287B1D45EA}" {
+     }
+    }
+    CompartmentDoorInfo "{685D73106CEE1F4E}" {
+     ContextName "door_pl010"
+     EntryPositionInfo PointInfo "{685D73106CEE1F22}" {
+      Offset 2.25 0 -2.3186
+     }
+     ExitPositionInfo PointInfo "{685D73106CEE1F27}" {
+      Offset 2.25 0 -2.3186
+     }
+     GetInTeleport 1
+     GetOutTeleport 1
+     FakeDoor 1
+     AccessibilitySettings CompartmentAccessibilityContext "{685D73106CEE1F25}" {
+     }
+    }
+   }
+   CompartmentSlots {
+    PilotCompartmentSlot PilotCompartment {
+    }
+    CargoCompartmentSlot passenger_l006 {
+     CompartmentAction SCR_GetInUserAction "{685D2D0F87BC5B87}" {
+      ParentContextList {
+       "passenger_l006"
+      }
+      UIInfo SCR_ActionUIInfo "{685D2D09DDE5A42E}" {
+       Name "#AR-UserAction_GetIn"
+       Icon "{04EF6B438A9F69A1}UI/Textures/UserActions/getinaction.edds"
+       m_sIconName "passenger"
+      }
+      CanAggregate 1
+      "Sort Priority" 3
+     }
+     GetOutAction SCR_GetOutAction "{685D2D0FC829550F}" {
+      UIInfo SCR_ActionUIInfo "{685D2D09D099EA05}" {
+       Name "#AR-UserAction_GetOut"
+       m_sIconName "getOutCommand"
+      }
+      VisibilityRange 5
+      "Sort Priority" 3
+     }
+     JumpOutAction SCR_JumpOutAction "{685D2D0FCB40F4DB}" {
+      UIInfo SCR_ActionUIInfo "{5D0B1D4714B59342}" {
+       Name "#AR-Keybind_Eject"
+       m_sIconName "getOutCommand"
+      }
+      "Sort Priority" 1
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{685D2D0FCE49BF00}" {
+      ParentContextList {
+       "passenger_l006"
+      }
+      UIInfo SCR_ActionUIInfo "{685D2D092A670793}" {
+       Name "#AR-UserAction_SwitchSeat"
+       m_sIconName "passenger"
+      }
+      VisibilityRange 5
+      Duration 0.5
+      CanAggregate 1
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+      }
+      SCR_RemoveCasualtyUserAction "{61089D5E00C44348}" {
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{685D2D0FDAEA5705}" {
+      Offset -1.0957 1.6296 0.3175
+      Angles 0 -64.5358 0
+     }
+     ForcedFreeLook 1
+     SkipCharacterDoorAnimationsFromSeat 1
+     SeatType 2
+     DoorInfoList {
+      3
+     }
+     UIInfo UIInfo "{685D2D0B20DDB0CF}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     BaseCoverage 0.3
+     m_iCompartmentSection 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{685D2D0ED2E2521F}" {
+      m_sDefaultOccupantPrefab "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+     }
+     m_ScreenShakeData SCR_BaseScreenShakeData "{685D2D0ED3BC3721}" {
+     }
+    }
+    CargoCompartmentSlot passenger_r006 {
+     CompartmentAction SCR_GetInUserAction "{685D731754DE92CD}" {
+      ParentContextList {
+       "passenger_r006"
+      }
+      UIInfo SCR_ActionUIInfo "{685D731754DE92D5}" {
+       Name "#AR-UserAction_GetIn"
+       Icon "{04EF6B438A9F69A1}UI/Textures/UserActions/getinaction.edds"
+       m_sIconName "passenger"
+      }
+      CanAggregate 1
+      "Sort Priority" 3
+     }
+     GetOutAction SCR_GetOutAction "{685D731754DE92DA}" {
+      UIInfo SCR_ActionUIInfo "{685D731754DE92D9}" {
+       Name "#AR-UserAction_GetOut"
+       m_sIconName "getOutCommand"
+      }
+      VisibilityRange 5
+      "Sort Priority" 3
+     }
+     JumpOutAction SCR_JumpOutAction "{685D731754DE92DF}" {
+      UIInfo SCR_ActionUIInfo "{685D731754DEB4FF}" {
+       Name "#AR-Keybind_Eject"
+       m_sIconName "getOutCommand"
+      }
+      "Sort Priority" 1
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{685D731754DEB4FD}" {
+      ParentContextList {
+       "passenger_r006"
+      }
+      UIInfo SCR_ActionUIInfo "{685D731754DEB4FC}" {
+       Name "#AR-UserAction_SwitchSeat"
+       m_sIconName "passenger"
+      }
+      VisibilityRange 5
+      Duration 0.5
+      CanAggregate 1
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{685D731754DEB482}" {
+      }
+      SCR_RemoveCasualtyUserAction "{685D731754DEB481}" {
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{685D2D0FDAEA5705}" {
+      Offset 1.1144 1.6296 0.1488
+      Angles 0 72.0171 0
+     }
+     ForcedFreeLook 1
+     SkipCharacterDoorAnimationsFromSeat 1
+     SeatType 2
+     DoorInfoList {
+      4
+     }
+     UIInfo UIInfo "{685D731754DEB486}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     BaseCoverage 0.3
+     m_iCompartmentSection 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{685D731754DEB48A}" {
+      m_sDefaultOccupantPrefab "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+     }
+     m_ScreenShakeData SCR_BaseScreenShakeData "{685D731754DEB488}" {
+     }
+    }
+    CargoCompartmentSlot passenger_l007 {
+     CompartmentAction SCR_GetInUserAction "{685D40288892CFC6}" {
+      ParentContextList {
+       "passenger_l007"
+      }
+      UIInfo SCR_ActionUIInfo "{685D40288892CFDE}" {
+       Name "#AR-UserAction_GetIn"
+       Icon "{04EF6B438A9F69A1}UI/Textures/UserActions/getinaction.edds"
+       m_sIconName "passenger"
+      }
+      CanAggregate 1
+      "Sort Priority" 3
+     }
+     GetOutAction SCR_GetOutAction "{685D40288892CFD1}" {
+      UIInfo SCR_ActionUIInfo "{685D40288892CFD0}" {
+       Name "#AR-UserAction_GetOut"
+       m_sIconName "getOutCommand"
+      }
+      VisibilityRange 5
+      "Sort Priority" 3
+     }
+     JumpOutAction SCR_JumpOutAction "{685D40288892CFD6}" {
+      UIInfo SCR_ActionUIInfo "{685D40288892CFD5}" {
+       Name "#AR-Keybind_Eject"
+       m_sIconName "getOutCommand"
+      }
+      "Sort Priority" 1
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{685D40288892CC2B}" {
+      ParentContextList {
+       "passenger_l007"
+      }
+      UIInfo SCR_ActionUIInfo "{685D40288892CC29}" {
+       Name "#AR-UserAction_SwitchSeat"
+       m_sIconName "passenger"
+      }
+      VisibilityRange 5
+      Duration 0.5
+      CanAggregate 1
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{685D40288892CC2F}" {
+      }
+      SCR_RemoveCasualtyUserAction "{685D40288892CC2D}" {
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{685D2D0FDAEA5705}" {
+      Offset -1.0279 1.6296 -0.4494
+      Angles 0 -90 0
+     }
+     ForcedFreeLook 1
+     SkipCharacterDoorAnimationsFromSeat 1
+     SeatType 2
+     DoorInfoList {
+      5
+     }
+     UIInfo UIInfo "{685D40288892CC22}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     BaseCoverage 0.3
+     m_iCompartmentSection 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{685D40288892CC26}" {
+      m_sDefaultOccupantPrefab "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+     }
+     m_ScreenShakeData SCR_BaseScreenShakeData "{685D40288892CC24}" {
+     }
+    }
+    CargoCompartmentSlot passenger_r007 {
+     CompartmentAction SCR_GetInUserAction "{685D7310E0A5B8AD}" {
+      ParentContextList {
+       "passenger_r007"
+      }
+      UIInfo SCR_ActionUIInfo "{685D7310E0A5B8B7}" {
+       Name "#AR-UserAction_GetIn"
+       Icon "{04EF6B438A9F69A1}UI/Textures/UserActions/getinaction.edds"
+       m_sIconName "passenger"
+      }
+      CanAggregate 1
+      "Sort Priority" 3
+     }
+     GetOutAction SCR_GetOutAction "{685D7310E0A5B8BB}" {
+      UIInfo SCR_ActionUIInfo "{685D7310E0A5B8B9}" {
+       Name "#AR-UserAction_GetOut"
+       m_sIconName "getOutCommand"
+      }
+      VisibilityRange 5
+      "Sort Priority" 3
+     }
+     JumpOutAction SCR_JumpOutAction "{685D7310E0A5B8BF}" {
+      UIInfo SCR_ActionUIInfo "{685D7310E0A5B8BE}" {
+       Name "#AR-Keybind_Eject"
+       m_sIconName "getOutCommand"
+      }
+      "Sort Priority" 1
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{685D7310E0A5B8BD}" {
+      ParentContextList {
+       "passenger_r007"
+      }
+      UIInfo SCR_ActionUIInfo "{685D7310E0A5B8BC}" {
+       Name "#AR-UserAction_SwitchSeat"
+       m_sIconName "passenger"
+      }
+      VisibilityRange 5
+      Duration 0.5
+      CanAggregate 1
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{685D7310E0A5B842}" {
+      }
+      SCR_RemoveCasualtyUserAction "{685D7310E0A5B840}" {
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{685D2D0FDAEA5705}" {
+      Offset 1.0984 1.6296 -0.4494
+      Angles 0 90 0
+     }
+     ForcedFreeLook 1
+     SkipCharacterDoorAnimationsFromSeat 1
+     SeatType 2
+     DoorInfoList {
+      6
+     }
+     UIInfo UIInfo "{685D7310E0A5B845}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     BaseCoverage 0.3
+     m_iCompartmentSection 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{685D7310E0A5B84F}" {
+      m_sDefaultOccupantPrefab "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+     }
+     m_ScreenShakeData SCR_BaseScreenShakeData "{685D7310E0A5B84E}" {
+     }
+    }
+    CargoCompartmentSlot passenger_l008 {
+     CompartmentAction SCR_GetInUserAction "{685D4028C217475B}" {
+      ParentContextList {
+       "passenger_l008"
+      }
+      UIInfo SCR_ActionUIInfo "{685D4028C2174753}" {
+       Name "#AR-UserAction_GetIn"
+       Icon "{04EF6B438A9F69A1}UI/Textures/UserActions/getinaction.edds"
+       m_sIconName "passenger"
+      }
+      CanAggregate 1
+      "Sort Priority" 3
+     }
+     GetOutAction SCR_GetOutAction "{685D4028C2174750}" {
+      UIInfo SCR_ActionUIInfo "{685D4028C2174757}" {
+       Name "#AR-UserAction_GetOut"
+       m_sIconName "getOutCommand"
+      }
+      VisibilityRange 5
+      "Sort Priority" 3
+     }
+     JumpOutAction SCR_JumpOutAction "{685D4028C2174755}" {
+      UIInfo SCR_ActionUIInfo "{685D4028C2174754}" {
+       Name "#AR-Keybind_Eject"
+       m_sIconName "getOutCommand"
+      }
+      "Sort Priority" 1
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{685D4028C21747AA}" {
+      ParentContextList {
+       "passenger_l008"
+      }
+      UIInfo SCR_ActionUIInfo "{685D4028C21747A9}" {
+       Name "#AR-UserAction_SwitchSeat"
+       m_sIconName "passenger"
+      }
+      VisibilityRange 5
+      Duration 0.5
+      CanAggregate 1
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{685D4028C21747A8}" {
+      }
+      SCR_RemoveCasualtyUserAction "{685D4028C21747AE}" {
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{685D2D0FDAEA5705}" {
+      Offset -1.0152 1.6296 -1.0693
+      Angles 0 -90 0
+     }
+     ForcedFreeLook 1
+     SkipCharacterDoorAnimationsFromSeat 1
+     SeatType 2
+     DoorInfoList {
+      7
+     }
+     UIInfo UIInfo "{685D4028C21747A3}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     BaseCoverage 0.3
+     m_iCompartmentSection 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{685D4028C21747A0}" {
+      m_sDefaultOccupantPrefab "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+     }
+     m_ScreenShakeData SCR_BaseScreenShakeData "{685D4028C21747A7}" {
+     }
+    }
+    CargoCompartmentSlot passenger_r008 {
+     CompartmentAction SCR_GetInUserAction "{685D7310F71BC98A}" {
+      ParentContextList {
+       "passenger_r008"
+      }
+      UIInfo SCR_ActionUIInfo "{685D7310F71BC993}" {
+       Name "#AR-UserAction_GetIn"
+       Icon "{04EF6B438A9F69A1}UI/Textures/UserActions/getinaction.edds"
+       m_sIconName "passenger"
+      }
+      CanAggregate 1
+      "Sort Priority" 3
+     }
+     GetOutAction SCR_GetOutAction "{685D7310F71BC997}" {
+      UIInfo SCR_ActionUIInfo "{685D7310F71BC995}" {
+       Name "#AR-UserAction_GetOut"
+       m_sIconName "getOutCommand"
+      }
+      VisibilityRange 5
+      "Sort Priority" 3
+     }
+     JumpOutAction SCR_JumpOutAction "{685D7310F71BC99B}" {
+      UIInfo SCR_ActionUIInfo "{685D7310F71BC99A}" {
+       Name "#AR-Keybind_Eject"
+       m_sIconName "getOutCommand"
+      }
+      "Sort Priority" 1
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{685D7310F71BC998}" {
+      ParentContextList {
+       "passenger_r008"
+      }
+      UIInfo SCR_ActionUIInfo "{685D7310F71BC99E}" {
+       Name "#AR-UserAction_SwitchSeat"
+       m_sIconName "passenger"
+      }
+      VisibilityRange 5
+      Duration 0.5
+      CanAggregate 1
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{685D7310F71BC99C}" {
+      }
+      SCR_RemoveCasualtyUserAction "{685D7310F71BC9A1}" {
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{685D2D0FDAEA5705}" {
+      Offset 1.0251 1.6296 -1.0693
+      Angles 0 90 0
+     }
+     ForcedFreeLook 1
+     SkipCharacterDoorAnimationsFromSeat 1
+     SeatType 2
+     DoorInfoList {
+      8
+     }
+     UIInfo UIInfo "{685D7310F71BC9A5}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     BaseCoverage 0.3
+     m_iCompartmentSection 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{685D7310F71BC9AE}" {
+      m_sDefaultOccupantPrefab "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+     }
+     m_ScreenShakeData SCR_BaseScreenShakeData "{685D7310F71BC9AC}" {
+     }
+    }
+    CargoCompartmentSlot passenger_l009 {
+     CompartmentAction SCR_GetInUserAction "{685D402824787919}" {
+      ParentContextList {
+       "passenger_l009"
+      }
+      UIInfo SCR_ActionUIInfo "{685D402824787913}" {
+       Name "#AR-UserAction_GetIn"
+       Icon "{04EF6B438A9F69A1}UI/Textures/UserActions/getinaction.edds"
+       m_sIconName "passenger"
+      }
+      CanAggregate 1
+      "Sort Priority" 3
+     }
+     GetOutAction SCR_GetOutAction "{685D402824787916}" {
+      UIInfo SCR_ActionUIInfo "{685D402824787914}" {
+       Name "#AR-UserAction_GetOut"
+       m_sIconName "getOutCommand"
+      }
+      VisibilityRange 5
+      "Sort Priority" 3
+     }
+     JumpOutAction SCR_JumpOutAction "{685D40282478796A}" {
+      UIInfo SCR_ActionUIInfo "{685D402824787969}" {
+       Name "#AR-Keybind_Eject"
+       m_sIconName "getOutCommand"
+      }
+      "Sort Priority" 1
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{685D40282478796F}" {
+      ParentContextList {
+       "passenger_l009"
+      }
+      UIInfo SCR_ActionUIInfo "{685D40282478796D}" {
+       Name "#AR-UserAction_SwitchSeat"
+       m_sIconName "passenger"
+      }
+      VisibilityRange 5
+      Duration 0.5
+      CanAggregate 1
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{685D402824787963}" {
+      }
+      SCR_RemoveCasualtyUserAction "{685D402824787962}" {
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{685D2D0FDAEA5705}" {
+      Offset -0.9479 1.6296 -1.6678
+      Angles 0 -96.4125 0
+     }
+     ForcedFreeLook 1
+     SkipCharacterDoorAnimationsFromSeat 1
+     SeatType 2
+     DoorInfoList {
+      9
+     }
+     UIInfo UIInfo "{685D402824787966}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     BaseCoverage 0.3
+     m_iCompartmentSection 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{685D402824787978}" {
+      m_sDefaultOccupantPrefab "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+     }
+     m_ScreenShakeData SCR_BaseScreenShakeData "{685D40282478797E}" {
+     }
+    }
+    CargoCompartmentSlot passenger_r009 {
+     CompartmentAction SCR_GetInUserAction "{685D7310D5DB5DDF}" {
+      ParentContextList {
+       "passenger_r009"
+      }
+      UIInfo SCR_ActionUIInfo "{685D7310D5DB5DE7}" {
+       Name "#AR-UserAction_GetIn"
+       Icon "{04EF6B438A9F69A1}UI/Textures/UserActions/getinaction.edds"
+       m_sIconName "passenger"
+      }
+      CanAggregate 1
+      "Sort Priority" 3
+     }
+     GetOutAction SCR_GetOutAction "{685D7310D5DB5DE4}" {
+      UIInfo SCR_ActionUIInfo "{685D7310D5DB5DE9}" {
+       Name "#AR-UserAction_GetOut"
+       m_sIconName "getOutCommand"
+      }
+      VisibilityRange 5
+      "Sort Priority" 3
+     }
+     JumpOutAction SCR_JumpOutAction "{685D7310D5DB5DE8}" {
+      UIInfo SCR_ActionUIInfo "{685D7310D5DB5DEF}" {
+       Name "#AR-Keybind_Eject"
+       m_sIconName "getOutCommand"
+      }
+      "Sort Priority" 1
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{685D7310D5DB5DEE}" {
+      ParentContextList {
+       "passenger_r009"
+      }
+      UIInfo SCR_ActionUIInfo "{685D7310D5DB5DED}" {
+       Name "#AR-UserAction_SwitchSeat"
+       m_sIconName "passenger"
+      }
+      VisibilityRange 5
+      Duration 0.5
+      CanAggregate 1
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{685D7310D5DB5DF3}" {
+      }
+      SCR_RemoveCasualtyUserAction "{685D7310D5DB5DF1}" {
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{685D2D0FDAEA5705}" {
+      Offset 0.9637 1.6296 -1.6744
+      Angles 0 96.4125 0
+     }
+     ForcedFreeLook 1
+     SkipCharacterDoorAnimationsFromSeat 1
+     SeatType 2
+     DoorInfoList {
+      10
+     }
+     UIInfo UIInfo "{685D7310D5DB5DF6}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     BaseCoverage 0.3
+     m_iCompartmentSection 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{685D7310D5DB5DFB}" {
+      m_sDefaultOccupantPrefab "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+     }
+     m_ScreenShakeData SCR_BaseScreenShakeData "{685D7310D5DB5DF9}" {
+     }
+    }
+    CargoCompartmentSlot passenger_l010 {
+     CompartmentAction SCR_GetInUserAction "{685D40283A176ACD}" {
+      ParentContextList {
+       "passenger_l010"
+      }
+      UIInfo SCR_ActionUIInfo "{685D40283A176AC0}" {
+       Name "#AR-UserAction_GetIn"
+       Icon "{04EF6B438A9F69A1}UI/Textures/UserActions/getinaction.edds"
+       m_sIconName "passenger"
+      }
+      CanAggregate 1
+      "Sort Priority" 3
+     }
+     GetOutAction SCR_GetOutAction "{685D40283A176AC4}" {
+      UIInfo SCR_ActionUIInfo "{685D40283A176ADA}" {
+       Name "#AR-UserAction_GetOut"
+       m_sIconName "getOutCommand"
+      }
+      VisibilityRange 5
+      "Sort Priority" 3
+     }
+     JumpOutAction SCR_JumpOutAction "{685D40283A176AD8}" {
+      UIInfo SCR_ActionUIInfo "{685D40283A176ADF}" {
+       Name "#AR-Keybind_Eject"
+       m_sIconName "getOutCommand"
+      }
+      "Sort Priority" 1
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{685D40283A176ADD}" {
+      ParentContextList {
+       "passenger_l010"
+      }
+      UIInfo SCR_ActionUIInfo "{685D40283A176AD3}" {
+       Name "#AR-UserAction_SwitchSeat"
+       m_sIconName "passenger"
+      }
+      VisibilityRange 5
+      Duration 0.5
+      CanAggregate 1
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{685D40283A176AD0}" {
+      }
+      SCR_RemoveCasualtyUserAction "{685D40283A176AD6}" {
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{685D2D0FDAEA5705}" {
+      Offset -0.8453 1.6296 -2.3186
+      Angles 0 -96.4125 0
+     }
+     ForcedFreeLook 1
+     SkipCharacterDoorAnimationsFromSeat 1
+     SeatType 2
+     DoorInfoList {
+      11
+     }
+     UIInfo UIInfo "{685D40283A176B2B}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     BaseCoverage 0.3
+     m_iCompartmentSection 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{685D40283A176B2F}" {
+      m_sDefaultOccupantPrefab "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+     }
+     m_ScreenShakeData SCR_BaseScreenShakeData "{685D40283A176B2D}" {
+     }
+    }
+    CargoCompartmentSlot passenger_r010 {
+     CompartmentAction SCR_GetInUserAction "{685D73102C525A7A}" {
+      ParentContextList {
+       "passenger_r010"
+      }
+      UIInfo SCR_ActionUIInfo "{685D73102C525A03}" {
+       Name "#AR-UserAction_GetIn"
+       Icon "{04EF6B438A9F69A1}UI/Textures/UserActions/getinaction.edds"
+       m_sIconName "passenger"
+      }
+      CanAggregate 1
+      "Sort Priority" 3
+     }
+     GetOutAction SCR_GetOutAction "{685D73102C525A00}" {
+      UIInfo SCR_ActionUIInfo "{685D73102C525A06}" {
+       Name "#AR-UserAction_GetOut"
+       m_sIconName "getOutCommand"
+      }
+      VisibilityRange 5
+      "Sort Priority" 3
+     }
+     JumpOutAction SCR_JumpOutAction "{685D73102C525A05}" {
+      UIInfo SCR_ActionUIInfo "{685D73102C525A04}" {
+       Name "#AR-Keybind_Eject"
+       m_sIconName "getOutCommand"
+      }
+      "Sort Priority" 1
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{685D73102C525A0A}" {
+      ParentContextList {
+       "passenger_r010"
+      }
+      UIInfo SCR_ActionUIInfo "{685D73102C525A09}" {
+       Name "#AR-UserAction_SwitchSeat"
+       m_sIconName "passenger"
+      }
+      VisibilityRange 5
+      Duration 0.5
+      CanAggregate 1
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{685D73102C525A0F}" {
+      }
+      SCR_RemoveCasualtyUserAction "{685D73102C525A0E}" {
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{685D2D0FDAEA5705}" {
+      Offset 0.8477 1.6296 -2.3217
+      Angles 0 96.4125 0
+     }
+     ForcedFreeLook 1
+     SkipCharacterDoorAnimationsFromSeat 1
+     SeatType 2
+     DoorInfoList {
+      12
+     }
+     UIInfo UIInfo "{685D73102C525A13}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     BaseCoverage 0.3
+     m_iCompartmentSection 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{685D73102C525A17}" {
+      m_sDefaultOccupantPrefab "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+     }
+     m_ScreenShakeData SCR_BaseScreenShakeData "{685D73102C525A15}" {
+     }
+    }
+   }
+  }
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   ActionContexts {
+    UserActionContext "{685D2D09BB5C8230}" {
+     UIInfo SCR_ActionContextUIInfo "{61CD4419B57BAE0F}" {
+     }
+     ContextName "passenger_l006"
+     Position PointInfo "{61CD44195C21461E}" {
+      Offset -1.0957 1.6296 0.3175
+      Angles 0 -90 0
+     }
+    }
+    UserActionContext "{685D7311F1DA50A2}" {
+     UIInfo SCR_ActionContextUIInfo "{685D7311F1DA505C}" {
+     }
+     ContextName "passenger_r006"
+     Position PointInfo "{685D7311F1DA5066}" {
+      Offset 1.1144 1.6296 0.1488
+      Angles 0 -90 0
+     }
+    }
+    UserActionContext "{685D402BD43C7B07}" {
+     UIInfo SCR_ActionContextUIInfo "{685D402BD43C7B41}" {
+     }
+     ContextName "passenger_l007"
+     Position PointInfo "{685D402BD43C7B45}" {
+      Offset -1.0279 1.6296 -0.4494
+     }
+    }
+    UserActionContext "{685D7311F7E301ED}" {
+     UIInfo SCR_ActionContextUIInfo "{685D7311F7E301B3}" {
+     }
+     ContextName "passenger_r007"
+     Position PointInfo "{685D7311F7E301B6}" {
+      Offset 1.0984 1.6296 -0.4494
+     }
+    }
+    UserActionContext "{685D402BD69465D7}" {
+     UIInfo SCR_ActionContextUIInfo "{685D402BD6946A1E}" {
+     }
+     ContextName "passenger_l008"
+     Position PointInfo "{685D402BD6946A12}" {
+      Offset -1.0152 1.6296 -1.0693
+     }
+    }
+    UserActionContext "{685D7311C1037003}" {
+     UIInfo SCR_ActionContextUIInfo "{685D7311C103703B}" {
+     }
+     ContextName "passenger_r008"
+     Position PointInfo "{685D7311C103703D}" {
+      Offset 1.0251 1.6296 -1.0693
+     }
+    }
+    UserActionContext "{685D402BD62392EA}" {
+     UIInfo SCR_ActionContextUIInfo "{685D402BD62392DD}" {
+     }
+     ContextName "passenger_l009"
+     Position PointInfo "{685D402BD62392D2}" {
+      Offset -0.9479 1.6296 -1.6678
+     }
+    }
+    UserActionContext "{685D7311C9847E2E}" {
+     UIInfo SCR_ActionContextUIInfo "{685D7311C9847FEB}" {
+     }
+     ContextName "passenger_r009"
+     Position PointInfo "{685D7311C9847FEF}" {
+      Offset 0.9637 1.6296 -1.6744
+     }
+    }
+    UserActionContext "{685D402BD72EC769}" {
+     UIInfo SCR_ActionContextUIInfo "{685D402BD72EC7AB}" {
+     }
+     ContextName "passenger_l010"
+     Position PointInfo "{685D402BD72EC7AF}" {
+      Offset -0.8453 1.6296 -2.3186
+     }
+    }
+    UserActionContext "{685D7311D1BB4642}" {
+     UIInfo SCR_ActionContextUIInfo "{685D7311D1BB4606}" {
+     }
+     ContextName "passenger_r010"
+     Position PointInfo "{685D7311D1BB460A}" {
+      Offset 0.8477 1.6296 -2.3217
+     }
+    }
+   }
+  }
+ }
+ coords 1047.789 39 2697.077
+}
