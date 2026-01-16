@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{E3DD72FD06BA2320}Prefabs/Vehicles/Wheeled/Stryker/M1126/CROWS/Stryker_CROWS.et"
+ Name "{1DC01AAACFFA8B63}Prefabs/Vehicles/Tracked/BMP1/BMP1_base.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }
