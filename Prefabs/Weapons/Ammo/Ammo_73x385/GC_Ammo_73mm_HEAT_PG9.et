@@ -1,0 +1,15 @@
+Projectile : "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et" {
+ ID "DA5C6308000CDEF2"
+ components {
+  MissileMoveComponent "{0EF36690881261EF}" {
+   InitSpeed 400
+   TimeToLive 10
+   ThrustInitTime 0.05
+   ThrustForce 700
+  }
+  RocketTraceEffectComponent "{54A0E2DA2D342A38}" {
+   ParticleEffect "{A3347BC91D4FB705}Particles/Weapon/Trail_PG15V.ptc"
+  }
+ }
+ angles 4.558 2.513 -0.171
+}

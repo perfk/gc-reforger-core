@@ -4,16 +4,9 @@ GenericEntity : "{D584F2FFFDC7DE49}Prefabs/Weapons/Warheads/Warhead_Shell_HE.et"
   BaseTriggerComponent "{55129E81CBAA1390}" {
    PROJECTILE_EFFECTS {
     ExplosionDamageContainer "{5D38C8F8C6A477C7}" {
-     ExplosionEffects {
-      ExplosionFragmentationEffect "{567CBC1D7AB652C7}" {
-       DamageFalloffCurve +{
-       }
-       FragMassScale 87
-      }
-     }
+     TntEquivalent 1
     }
    }
   }
  }
- coords 2.543 -1.717 -2.927
 }
