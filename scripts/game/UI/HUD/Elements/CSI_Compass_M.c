@@ -31,7 +31,15 @@ modded class CSI_Compass : SCR_ScriptedWidgetComponent
 		} else 
 			m_wCompass.SetVisible(false);
 
-		if (m_SettingsManager.GetSettingBool(CSI_GameSettings.BEARING_VISIBLE) && CSI_ChararcterHelper.GetCharacterVehicleCompartment(SCR_PlayerController.GetLocalMainEntity()))
+		PlayerController pc = GetGame().GetPlayerController();
+		if (!pc)
+			return;
+	
+		BaseCompartmentSlot compartment; 
+		IEntity player = pc.GetControlledEntity();
+		if (player)
+			compartment = CSI_ChararcterHelper.GetCharacterVehicleCompartment(player);
+		if (m_SettingsManager.GetSettingBool(CSI_GameSettings.BEARING_VISIBLE) && compartment)
 
 		{
 			string bearingAdd = "";
