@@ -16,15 +16,13 @@ GenericEntity : "{D584F2FFFDC7DE49}Prefabs/Weapons/Warheads/Warhead_Shell_HE.et"
       BaseExplosionDamage "{5D8D1EB3EF9D02C6}" {
        DamageDistance 10
        ExplosionEffectSpeed 7920
-       DamageFalloffCurve {
-        0 1 0.049 0.599 0.099 0.201 0.149 0.098 0.2 0.051 0.3 0.037 1 0
+       DamageFalloffCurve +{
        }
       }
       BaseExplosionDamage "{61DAF5E24D9CA168}" {
        DamageDistance 1
        ExplosionEffectSpeed 7920
-       DamageFalloffCurve {
-        0 1 1 0
+       DamageFalloffCurve +{
        }
       }
       BaseExplosionDamage "{5D8D1EB3EBB36077}" {
@@ -43,8 +41,7 @@ GenericEntity : "{D584F2FFFDC7DE49}Prefabs/Weapons/Warheads/Warhead_Shell_HE.et"
        DamageType Fragmentation
        DamageDistance 40
        ExplosionEffectSpeed 7920
-       DamageFalloffCurve {
-        0 1 0.169 0.404 0.441 0.243 1 0.155
+       DamageFalloffCurve +{
        }
        DamageFragmentCount 1800
        GurneyShape SPHERE
@@ -71,5 +68,5 @@ GenericEntity : "{D584F2FFFDC7DE49}Prefabs/Weapons/Warheads/Warhead_Shell_HE.et"
    ParticleEffect "{318510C6FB1633D9}Particles/Weapon/Explosion_Mortar_Base.ptc"
   }
  }
- coords 1208.204 140.122 4267.916
+ coords 2.825 -1.697 -2.581
 }

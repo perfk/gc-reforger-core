@@ -1,0 +1,10 @@
+GenericEntity : "{EFC76BFD1984F44D}Prefabs/Weapons/Core/Cannon_base.et" {
+ ID "CFBAA4B725411E45"
+ components {
+  WeaponSoundComponent "{5A8685198A9AEEDD}" {
+   Filenames {
+    "{95AA0243F9DEAB1C}Sounds/Weapons/Launchers/RPG7/Weapons_Launchers_RPG7_Shot.acp" "{B359BCB5C00F9FFC}Sounds/Weapons/Launchers/RPG7/Weapons_Launchers_RPG7_Handling.acp"
+   }
+  }
+ }
+}
