@@ -1,11 +1,27 @@
 Projectile : "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et" {
  ID "DA5C6308000CDEF2"
  components {
+  CollisionTriggerComponent "{529E88841E9ED863}" {
+   PROJECTILE_EFFECTS {
+    ExplosionEffect "{529E88841E9ED86F}" {
+     EffectPrefab "{2CE1B96EC83F0A10}Prefabs/Weapons/Warheads/Warhead_HEAT_PG-9.et"
+    }
+   }
+  }
   MissileMoveComponent "{0EF36690881261EF}" {
    InitSpeed 400
-   TimeToLive 10
-   ThrustInitTime 0.05
-   ThrustForce 700
+   Mass 1.2
+   TimeToLive 15
+   DeleteWhenStop 0
+   TriggerWhenStop 0
+   TriggerWhenTimeout 0
+   BallisticTableConfig "{8AFCEC880D8A115B}Configs/Weapons/AIBallisticTables/AIBT_Rocket_PG15.conf"
+   ThrustTime 0.6
+   ThrustForce 1650
+   ForwardAirFriction 0.08
+   SideAirFriction 0.2
+   AlignTorque 0.2
+   DistanceEnableGravitation 0.8
   }
   RocketTraceEffectComponent "{54A0E2DA2D342A38}" {
    ParticleEffect "{A3347BC91D4FB705}Particles/Weapon/Trail_PG15V.ptc"
