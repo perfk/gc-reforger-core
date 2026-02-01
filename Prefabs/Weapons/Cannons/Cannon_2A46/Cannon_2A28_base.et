@@ -10,22 +10,11 @@ GenericEntity : "{EFC76BFD1984F44D}Prefabs/Weapons/Core/Cannon_base.et" {
    components {
     SightsComponent "{BB23A637957CFFF8}" {
      SightsPosition PointInfo "{BB23A63796688E69}" {
-      PivotID ""
-      Offset -0.3502 0.3604 -0.305
-     }
-     SightsRanges {
-      SightRangeInfo "{687ED9CEE3C38FD2}" {
-       Range 0 1300
-       WeaponPosition PointInfo "{687ED9CEE3C38859}" {
-        Offset 0 0 0
-        Angles 1.66992 0 0
-       }
-      }
-     }
-     ZeroingGenerator BaseZeroingGenerator "{687D5A1CDB7F4085}" {
+      PivotID "Armature.001"
      }
     }
     MuzzleComponent "{50F64C4591CD7AA6}" {
+     MuzzleType RPGMuzzle
      DispersionRange 382.5
     }
    }

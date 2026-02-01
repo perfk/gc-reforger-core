@@ -16,10 +16,10 @@ Projectile : "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et" {
    TriggerWhenStop 0
    TriggerWhenTimeout 0
    BallisticTableConfig "{8AFCEC880D8A115B}Configs/Weapons/AIBallisticTables/AIBT_Rocket_PG15.conf"
-   ThrustTime 0.6
-   ThrustForce 1650
+   ThrustTime 0.7
+   ThrustForce 1600
    ForwardAirFriction 0.08
-   SideAirFriction 0.2
+   SideAirFriction 0.15
    AlignTorque 0.2
    DistanceEnableGravitation 0.8
   }

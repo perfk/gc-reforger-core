@@ -37,15 +37,16 @@ Projectile : "{9090159492A859AF}Prefabs/Weapons/Ammo/RPG/RHS_AmmoRocket_RPG_base
   }
   MissileMoveComponent "{0EF36690881261EF}" {
    InitSpeed 290
-   InitSpeedVariation 5
-   Mass 2.6
-   TimeToLive 15
+   InitSpeedVariation 2
+   Mass 3.7
+   TimeToLive 60
    BallisticTableConfig "{E3C7859E728E8A89}Configs/Weapons/AIBallisticTables/AIBT_Rocket_OG15.conf"
    ThrustTime 0
    ThrustForce 0
    ForwardAirFriction 0.044
    SideAirFriction 0.1
-   DistanceEnableGravitation 1.3
+   AlignTorque 0.2
+   DistanceEnableGravitation 2
   }
   RigidBody "{529E88841E9EDFB4}" {
    Mass 2
