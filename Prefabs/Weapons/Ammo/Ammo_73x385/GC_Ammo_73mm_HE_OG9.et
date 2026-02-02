@@ -5,6 +5,7 @@ Projectile : "{9090159492A859AF}Prefabs/Weapons/Ammo/RPG/RHS_AmmoRocket_RPG_base
    PROJECTILE_EFFECTS {
     ExplosionEffect "{5F26DE324F15E0FB}" {
      EffectPrefab "{A3D501B973B16ECE}Prefabs/Weapons/Warheads/Warhead_Shell_HE_OG9.et"
+     ParticleEffect "{9D8D204CCCC44A38}Particles/Weapon/Explosion_M112.ptc"
     }
    }
   }
@@ -35,15 +36,17 @@ Projectile : "{9090159492A859AF}Prefabs/Weapons/Ammo/RPG/RHS_AmmoRocket_RPG_base
    Object "{A691643F3F873980}Assets/Weapons/Magazines/rpg7/OG7V_Armed.xob"
   }
   MissileMoveComponent "{0EF36690881261EF}" {
-   InitSpeed 316
-   InitSpeedVariation 5
-   Mass 2.6
-   TimeToLive 10
+   InitSpeed 290
+   InitSpeedVariation 2
+   Mass 3.7
+   TimeToLive 60
+   BallisticTableConfig "{E3C7859E728E8A89}Configs/Weapons/AIBallisticTables/AIBT_Rocket_OG15.conf"
    ThrustTime 0
    ThrustForce 0
    ForwardAirFriction 0.044
-   SideAirFriction 0.02
-   DistanceEnableGravitation 1.3
+   SideAirFriction 0.1
+   AlignTorque 0.2
+   DistanceEnableGravitation 2
   }
   RigidBody "{529E88841E9EDFB4}" {
    Mass 2
