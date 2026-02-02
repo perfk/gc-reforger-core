@@ -10,6 +10,7 @@ PS_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
  m_bPublicCommandBriefing 1
  m_bRemoveSquadMarkers 1
  m_iFreezeTime 0
+ m_bDisableChat 1
  m_bEnableSpectatorLocalVoice 1
  m_bDisableArmaVision 0
 }
