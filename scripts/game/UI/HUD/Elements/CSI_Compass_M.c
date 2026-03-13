@@ -3,7 +3,7 @@ modded class CSI_Compass : SCR_ScriptedWidgetComponent
 	override void Update()
 	{		
 		int yawInt;
-        float yaw = m_HUDManager.GetLocalYaw();
+        float yaw = m_HUDSystem.GetLocalYaw();
 		yawInt = -yaw;
 		
 		if (m_SettingsManager.GetSettingBool(CSI_GameSettings.COMPASS_VISIBLE))
