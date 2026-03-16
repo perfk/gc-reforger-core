@@ -63,6 +63,7 @@ GenericEntity : "{D584F2FFFDC7DE49}Prefabs/Weapons/Warheads/Warhead_Shell_HE.et"
      EffectPrefab "{22746201ACF6ED93}Prefabs/LM_Suppression/Suppression_Explosion_Shell_HE.et"
     }
    }
+   TriggerOffset -1
   }
   HitEffectComponent "{9D9BE68D6F65A10F}" {
    ParticleEffect "{318510C6FB1633D9}Particles/Weapon/Explosion_Mortar_Base.ptc"
