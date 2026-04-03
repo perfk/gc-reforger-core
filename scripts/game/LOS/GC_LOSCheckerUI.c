@@ -96,11 +96,11 @@ class GC_LOSCheckerUI : SCR_MapUIBaseComponent
 			if (!cell || cell.m_losResult == GC_SightTraceResult.Processing)
 				continue;
 			if (cell.m_losResult == GC_SightTraceResult.Free)
-				color = Color.FromRGBA(0,255,0,100);
+				color = Color.FromRGBA(0,255,0,63);
 			else if (cell.m_losResult == GC_SightTraceResult.Terrain)
-				color = Color.FromRGBA(255,0,0,100);
+				color = Color.FromRGBA(255,0,0,63);
 			else // view geo
-				color = Color.FromRGBA(255,80,0,100);
+				color = Color.FromRGBA(255,127,0,63);
 			DrawShape(cell.m_vMin, cell.m_vMax, color);
 		}
 	}

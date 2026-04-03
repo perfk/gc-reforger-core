@@ -25,7 +25,7 @@ class GC_LOSSystem : GameSystem
 	SCR_MapEntity m_MapEntity;
 	
 	protected float m_fGridSize = 5;
-	protected int m_iRadiusCells = 25;
+	protected int m_iRadiusCells = 40;
 	protected int m_iKeepRadiusCells = 100;
 
 	protected int m_iFrame;
@@ -83,7 +83,7 @@ class GC_LOSSystem : GameSystem
 		array<GC_LOSCell> cells = MarkWantedCells(cGX, cGZ, m_iRadiusCells);
 		PruneOldCells(cGX, cGZ, m_iKeepRadiusCells);
 
-		ProcessTraceQueue(250); // traces per update (tune)
+		ProcessTraceQueue(500); // traces per update (tune)
 		
 		GC_LOSCheckerUI losMenu = GC_LOSCheckerUI.Cast(m_MapEntity.GetMapUIComponent(GC_LOSCheckerUI));
 		losMenu.RegisterCells(cells);
@@ -208,7 +208,7 @@ class GC_LOSSystem : GameSystem
 		cell.m_vCenter = Vector((minWorldX + maxWorldX) * 0.5, 0, (minWorldZ + maxWorldZ) * 0.5);
 	
 		// Cache ground height at the center
-		cell.m_vCenter[1] = GetGame().GetWorld().GetSurfaceY(cell.m_vCenter[0], cell.m_vCenter[2]) + 1;
+		cell.m_vCenter[1] = GetGame().GetWorld().GetSurfaceY(cell.m_vCenter[0], cell.m_vCenter[2]) + 0.75;
 	}
 	
 	protected int WorldToGrid(float world)
