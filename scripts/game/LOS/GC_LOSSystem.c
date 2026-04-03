@@ -7,10 +7,17 @@ class GC_LOSCell
 	vector m_vMin;
 	vector m_vMax;
 
-	bool m_bHasLOS;
-	bool m_bHasResult = false;
+	GC_SightTraceResult m_losResult = GC_SightTraceResult.Processing;
 
 	int m_iLastSeenFrame;
+}
+
+enum GC_SightTraceResult
+{
+	Processing,
+	Terrain,
+	ViewGeo,
+	Free
 }
 
 class GC_LOSSystem : GameSystem
@@ -18,7 +25,7 @@ class GC_LOSSystem : GameSystem
 	SCR_MapEntity m_MapEntity;
 	
 	protected float m_fGridSize = 5;
-	protected int m_iRadiusCells = 25;
+	protected int m_iRadiusCells = 40;
 	protected int m_iKeepRadiusCells = 100;
 
 	protected int m_iFrame;
@@ -76,7 +83,7 @@ class GC_LOSSystem : GameSystem
 		array<GC_LOSCell> cells = MarkWantedCells(cGX, cGZ, m_iRadiusCells);
 		PruneOldCells(cGX, cGZ, m_iKeepRadiusCells);
 
-		ProcessTraceQueue(1000); // traces per update (tune)
+		ProcessTraceQueue(500); // traces per update (tune)
 		
 		GC_LOSCheckerUI losMenu = GC_LOSCheckerUI.Cast(m_MapEntity.GetMapUIComponent(GC_LOSCheckerUI));
 		losMenu.RegisterCells(cells);
@@ -148,58 +155,43 @@ class GC_LOSSystem : GameSystem
 	
 	protected void ProcessTraceQueue(int maxTraces)
 	{
-		int count = Math.Min(maxTraces, m_aTraceQueue.Count());
+		int count = m_aTraceQueue.Count();
 			
-		for (int i = 0; i < count; i++)
+		for (int i = count - 1; i >= Math.Max(count - maxTraces - 1, 0); i--)
 		{
-			GC_LOSCell cell = m_aTraceQueue[0];
-			m_aTraceQueue.RemoveOrdered(0);
-
-			if (!cell)
-				continue;
-
-			DoLOSTrace(cell);
+			GC_LOSCell cell = m_aTraceQueue[i];
+			if (cell)
+				DoLOSTrace(cell);
+			m_aTraceQueue.Remove(i);
 		}
 	}
 
 	protected void DoLOSTrace(GC_LOSCell cell)
 	{
-		// Replace this with your real LOS trace:
-		// start = your observer position (player camera / unit head)
-		// end = vector m_vCenter; + some height
-		vector end = cell.m_vCenter;
-		
-		bool hasLOS = HasTerrainLOS(cell.m_vCenter);
-
-		cell.m_bHasLOS = hasLOS;
-		cell.m_bHasResult = true;
+		if (!HasVisibility(cell.m_vCenter,TraceFlags.WORLD, EPhysicsLayerDefs.Terrain))
+			cell.m_losResult = GC_SightTraceResult.Terrain;
+		else if (!HasVisibility(cell.m_vCenter, TraceFlags.ENTS, EPhysicsLayerDefs.ViewGeometry))
+			cell.m_losResult = GC_SightTraceResult.ViewGeo;
+		else
+			cell.m_losResult = GC_SightTraceResult.Free;
 	}
 	
-	protected bool HasTerrainLOS(vector toPos)
+	protected bool HasVisibility(vector toPos, TraceFlags flags, EPhysicsLayerDefs layer)
 	{
 		BaseWorld world = GetGame().GetWorld();
 		if (!world)
 			return false;
-	
+		
 		TraceParam trace = new TraceParam();
 		trace.Start = m_vStartPosition;
 		trace.End = toPos;
-		trace.TargetLayers = EPhysicsLayerDefs.Terrain;
-		trace.Flags = TraceFlags.WORLD | TraceFlags.ANY_CONTACT;
-	
+		trace.Flags = flags;
+		trace.TargetLayers = layer;
+		
 		float frac = world.TraceMove(trace);
-	
-		if (frac >= 0.9999)
-			return true;
-	
-		// If we "hit" basically at the end, treat as clear (end is on/near terrain)
-		vector dir = trace.End - trace.Start;
-		vector hitPos = trace.Start + dir * frac;
-	
-		if (vector.DistanceSq(hitPos, trace.End) <= 1)
-			return true;
-	
-		return false;
+		float dist = vector.Distance(trace.Start, trace.End);
+		
+		return (frac >= (dist - 1.0) / dist);
 	}
 	
 	protected void BuildCellBounds(GC_LOSCell cell)
@@ -216,7 +208,7 @@ class GC_LOSSystem : GameSystem
 		cell.m_vCenter = Vector((minWorldX + maxWorldX) * 0.5, 0, (minWorldZ + maxWorldZ) * 0.5);
 	
 		// Cache ground height at the center
-		cell.m_vCenter[1] = GetGame().GetWorld().GetSurfaceY(cell.m_vCenter[0], cell.m_vCenter[2]) + 0.1;
+		cell.m_vCenter[1] = GetGame().GetWorld().GetSurfaceY(cell.m_vCenter[0], cell.m_vCenter[2]) + 0.75;
 	}
 	
 	protected int WorldToGrid(float world)
