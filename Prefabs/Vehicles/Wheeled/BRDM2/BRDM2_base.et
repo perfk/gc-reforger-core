@@ -1,7 +1,30 @@
 Vehicle : "{543A50BF3A42AD47}Prefabs/Vehicles/Core/Wheeled_APC_Base.et" {
  ID "BBCBA43A9778AE21"
  components {
+  WCS_Armament_VehicleCameraComponent "{64C89DC0626D4F29}" {
+   m_Cameras {
+    WCS_VehicleCameraProps "{64C89DC5B285270C}" {
+     m_Position PointInfo "{64C89DC5B28526C7}" {
+      Offset -1.0126 1.7918 2.1062
+      Angles 0 -176.0977 0
+     }
+    }
+   }
+  }
   ActionsManagerComponent "{C97BE5489221AE18}" {
+   ActionContexts {
+    UserActionContext "{64C89DC2EF44FB53}" {
+     Position PointInfo "{64C89DC2EF44FB04}" {
+      Offset -0.6333 1.6602 1.6824
+     }
+    }
+    UserActionContext "{690D096E55EE7FE7}" {
+     ContextName "periscope_driver_RearView"
+     Position PointInfo "{64C89DC2EF44FB04}" {
+      Offset -0.5889 1.6602 1.7677
+     }
+    }
+   }
    additionalActions {
     WCS_Armament_VehicleCameraAction "{64C89DC4B57AF02A}" {
      ParentContextList {
@@ -20,7 +43,10 @@ Vehicle : "{543A50BF3A42AD47}Prefabs/Vehicles/Core/Wheeled_APC_Base.et" {
      }
     }
     WCS_Armament_VehicleCameraAction "{64C89DC4DC11A50C}" {
-     ParentContextList {
+     ParentContextList +{
+     }
+     UIInfo SCR_ActionUIInfo "{629D11CB1C21D168}" {
+      Name "Rearview Mirror"
      }
     }
     WCS_Armament_VehicleCameraAction "{64C89DC4DD4B2B1E}" {
