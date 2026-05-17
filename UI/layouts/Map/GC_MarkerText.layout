@@ -1,0 +1,24 @@
+FrameWidgetClass {
+ Name "Frame"
+ {
+  RichTextWidgetClass "{6954AAC02ACB59FA}" {
+   Name "text"
+   Slot FrameWidgetSlot "{6954AAC051D19869}" {
+    OffsetLeft 0
+    OffsetTop 0
+    SizeX 100
+    OffsetRight -100
+    SizeY 30
+    OffsetBottom -30
+    Alignment 0 0.5
+    SizeToContent 1
+   }
+   Clipping False
+   Text ""
+   "Min Font Size" 12
+   FontProperties FontProperties "{6954DEF13D67F6F6}" {
+    OutlineSize 1
+   }
+  }
+ }
+}
