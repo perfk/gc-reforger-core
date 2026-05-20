@@ -1,0 +1,4 @@
+CanvasWidgetClass {
+ Name "rootFrame"
+ Clipping False
+}
