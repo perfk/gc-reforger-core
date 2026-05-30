@@ -234,7 +234,7 @@ class GCC_ArtilleryMission
 	GCC_ArtyData m_round;
 	int m_desiredDispersion;
 	int m_totalRounds;
-	int m_gunCount
+	int m_gunCount;
 	vector m_targetPosition;
 	protected int m_totalRoundsFired = 0;
 	
@@ -333,7 +333,7 @@ class GCC_ArtyData
 [BaseContainerProps()]
 class GCC_ArtyOpenMenuAvailable : SCR_AvailableActionCondition
 {
-	override bool IsAvailable(SCR_AvailableActionsConditionData data)
+	override bool IsAvailable(notnull SCR_AvailableActionsConditionData data)
 	{
 		GCC_Arty arty = GCC_Arty.GetInstance();
 		if(!arty)
