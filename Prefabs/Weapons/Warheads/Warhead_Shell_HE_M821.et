@@ -57,13 +57,8 @@ GenericEntity : "{D584F2FFFDC7DE49}Prefabs/Weapons/Warheads/Warhead_Shell_HE.et"
      FarPlane 2.75
      Scale 2.75
     }
-    SpawnPrefabEffect "{619F700C03F07AC8}" {
-     TriggerOnce 1
-     AttachToParent 1
-     EffectPrefab "{22746201ACF6ED93}Prefabs/LM_Suppression/Suppression_Explosion_Shell_HE.et"
-    }
    }
-   TriggerOffset -1
+   "Trigger Offset" 0 0 -1
   }
   HitEffectComponent "{9D9BE68D6F65A10F}" {
    ParticleEffect "{318510C6FB1633D9}Particles/Weapon/Explosion_Mortar_Base.ptc"
